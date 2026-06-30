@@ -149,7 +149,6 @@ function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
 
 // ── LOGO SVG ──────────────────────────────────────────────────────────────────
 function Logo({ size = 40 }) {
-  const s = size / 200;
   return (
     <svg width={size * 1.5} height={size} viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
       <defs><clipPath id="lc"><ellipse cx="82" cy="122" rx="33" ry="43"/></clipPath></defs>
