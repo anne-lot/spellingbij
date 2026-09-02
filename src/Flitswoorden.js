@@ -465,7 +465,7 @@ function VergelijkVak({ label, woord, kleur, bg, font, dyslexie }) {
 // ── KNOPSTIJLEN ───────────────────────────────────────────────────────────────
 function primaireKnop(font) {
   return {
-    background: C.bruin, color: C.creme, border: "none", borderRadius: 14,
+    background: C.cremeMid, color: C.zwart, border: `2px solid ${C.geelRand}`, borderRadius: 14,
     padding: "14px 28px", fontWeight: 800, fontSize: 16, cursor: "pointer", fontFamily: font,
   };
 }

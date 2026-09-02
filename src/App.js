@@ -305,20 +305,20 @@ export default function SpellingApp() {
         </div>
 
         <button onClick={() => setFase(FASE.FLITSWOORDEN)} style={{
-          background: C.bruin, color: C.creme, border: "none", borderRadius: 16,
+          background: C.cremeMid, color: C.zwart, border: `2px solid ${C.geelRand}`, borderRadius: 16,
           padding: "16px 24px", fontWeight: 800, fontSize: 18, cursor: "pointer",
           width: "100%", fontFamily: font, letterSpacing: 0.3,
-          boxShadow: "0 4px 16px rgba(138,90,43,0.25)", transition: "transform 0.1s",
+          boxShadow: "0 2px 12px rgba(0,0,0,0.05)", transition: "transform 0.1s",
           display: "flex", alignItems: "center", gap: 12,
         }}>
           <span style={{ fontSize: 24 }}>⚡</span>
           <span style={{ textAlign: "left", flex: 1 }}>
             Start Flitswoorden
-            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.bruinLicht }}>
+            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.grijs }}>
               5 woordcategorieën
             </span>
           </span>
-          <span>→</span>
+          <span style={{ color: C.grijs }}>→</span>
         </button>
 
         <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "28px 0 14px" }}>
