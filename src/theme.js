@@ -130,7 +130,7 @@ export function Footer({ font }) {
   return (
     <footer style={{ textAlign: "center", padding: "24px 16px", borderTop: `1px solid ${C.rand}`, marginTop: 24 }}>
       <p style={{ fontFamily: font, fontSize: 12, color: C.grijs }}>
-        spellingbij.nl · <a href="/privacy" style={{ color: C.grijs }}>Privacy</a>
+        spellingbij · je voortgang blijft op dit apparaat
       </p>
     </footer>
   );
