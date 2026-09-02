@@ -22,6 +22,8 @@ export const C = {
   blauw:     "#4338CA",
   wit:       "#FFFFFF",
   rand:      "#E8E0C8",
+  bruin:     "#8A5A2B",
+  bruinLicht:"#E8CBA8",
 };
 
 export function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
