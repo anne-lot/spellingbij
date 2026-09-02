@@ -337,7 +337,7 @@ export default function SpellingApp() {
           </div>
           <p style={{ fontFamily: font, fontSize: 13, color: C.grijs, lineHeight: 1.6, margin: "0 0 12px" }}>
             Hier kun je straks losse spellingregels oefenen — met een korte toets die eerst
-            kijkt wat je al kunt, en daarna alleen de regels waar je nog even mee bezig bent.
+            kijkt wat je al kunt.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
             {[3,4,5].map(g => (
