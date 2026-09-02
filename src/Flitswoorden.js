@@ -7,38 +7,40 @@ import flitsData from "./data/flitswoorden.json";
 // verdwijnt, en het kind typt het over uit het geheugen.
 //
 // Alles wat je wilt aanpassen zit in src/data/flitswoorden.json:
-//   - standaardFlitstijd : seconden dat een woord getoond wordt (fallback)
-//   - sessieLengte        : aantal woorden per sessie
-//   - per categorie een eigen "flitstijd" en "woorden"-lijst
+//   - standaardFlitstijd  : seconden dat een woord getoond wordt (fallback)
+//   - sessieLengte         : aantal woorden per sessie
+//   - flitstijdPerGroep    : flitstijd per groep (3 t/m 8)
+//   - flitswoorden.<cat>   : per categorie een "groep" + "woorden"-lijst; de
+//                            woorden van alle categorieën met dezelfde groep
+//                            worden samengevoegd tot één oefenlijst.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const OPSLAG_KEY = "spellingbij_flitswoorden_v1";
 
-// Nette Nederlandse labels per categorie-id uit het JSON-bestand.
-const CATEGORIE_LABEL = {
-  kort:          "Korte woorden",
-  middel:        "Langere woorden",
-  werkwoorden:   "Werkwoorden",
-  voorzetsels:   "Voorzetsels",
-  signaalwoorden:"Signaalwoorden",
-};
-
-const CATEGORIEEN = Object.entries(flitsData.flitswoorden).map(([id, cfg]) => ({
-  id,
-  label: CATEGORIE_LABEL[id] || id,
-  niveau: cfg.niveau,
-  flitstijd: cfg.flitstijd,
-  woorden: cfg.woorden,
-}));
+const ALLE_GROEPEN = [3, 4, 5, 6, 7, 8];
 
 const STANDAARD_FLITSTIJD = flitsData.standaardFlitstijd ?? 3;
 const SESSIE_LENGTE = flitsData.sessieLengte ?? 12;
+const FLITSTIJD_PER_GROEP = flitsData.flitstijdPerGroep ?? {};
 
-// Bepaal hoe lang één woord getoond wordt. Nu: per categorie instelbaar via JSON,
-// met een kleine extra marge voor lange woorden. Later kun je dit verder
-// verfijnen (bijv. per niveau of per woord) zonder de rest aan te passen.
-function bepaalFlitstijd(woord, categorie) {
-  const basis = categorie.flitstijd ?? STANDAARD_FLITSTIJD;
+// Alle woorden per groep, samengevoegd uit de categorieën in flitswoorden.json.
+const GROEPEN = ALLE_GROEPEN.map((nr) => {
+  const woorden = Object.values(flitsData.flitswoorden)
+    .filter((cfg) => cfg.groep === nr)
+    .flatMap((cfg) => cfg.woorden);
+  return {
+    nr,
+    id: `groep-${nr}`,
+    label: `Groep ${nr}`,
+    flitstijd: FLITSTIJD_PER_GROEP[nr] ?? STANDAARD_FLITSTIJD,
+    woorden,
+  };
+});
+
+// Bepaal hoe lang één woord getoond wordt: basistijd van de groep, met een kleine
+// extra marge voor lange woorden. Later verfijnbaar zonder de rest aan te passen.
+function bepaalFlitstijd(woord, groep) {
+  const basis = groep.flitstijd ?? STANDAARD_FLITSTIJD;
   const extra = woord.length >= 12 ? 1 : 0;
   return basis + extra;
 }
@@ -56,14 +58,14 @@ function leesVoortgang() {
   }
 }
 
-function bewaarSessie(categorieId, goed, totaal) {
+function bewaarSessie(groepId, goed, totaal) {
   try {
     const alles = leesVoortgang();
-    const vorig = alles[categorieId] || {
+    const vorig = alles[groepId] || {
       sessies: 0, besteScore: 0, laatsteScore: 0, laatsteTotaal: 0,
       totaalGoed: 0, totaalWoorden: 0,
     };
-    alles[categorieId] = {
+    alles[groepId] = {
       sessies: vorig.sessies + 1,
       besteScore: Math.max(vorig.besteScore, goed),
       laatsteScore: goed,
@@ -106,7 +108,7 @@ function Aftelcirkel({ resterend, seconden, font }) {
 // ── HOOFDCOMPONENT ────────────────────────────────────────────────────────────
 export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
   const [stap, setStap] = useState("keuze"); // keuze | flits | invoer | feedback | klaar
-  const [categorie, setCategorie] = useState(null);
+  const [groep, setGroep] = useState(null);
   const [sessieWoorden, setSessieWoorden] = useState([]);
   const [index, setIndex] = useState(0);
   const [invoer, setInvoer] = useState("");
@@ -117,12 +119,12 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
   const pageStyle = { minHeight: "100vh", background: C.creme, fontFamily: font };
 
   const huidigWoord = sessieWoorden[index];
-  const flitstijd = categorie && huidigWoord ? bepaalFlitstijd(huidigWoord, categorie) : STANDAARD_FLITSTIJD;
+  const flitstijd = groep && huidigWoord ? bepaalFlitstijd(huidigWoord, groep) : STANDAARD_FLITSTIJD;
 
   // ── Sessie starten ──
-  const startSessie = useCallback((cat) => {
-    const woorden = shuffle(cat.woorden).slice(0, Math.min(SESSIE_LENGTE, cat.woorden.length));
-    setCategorie(cat);
+  const startSessie = useCallback((g) => {
+    const woorden = shuffle(g.woorden).slice(0, Math.min(SESSIE_LENGTE, g.woorden.length));
+    setGroep(g);
     setSessieWoorden(woorden);
     setIndex(0);
     setInvoer("");
@@ -176,7 +178,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
   function volgende() {
     if (index + 1 >= sessieWoorden.length) {
       const goedAantal = (resultaten.filter((r) => r.goed)).length;
-      bewaarSessie(categorie.id, goedAantal, sessieWoorden.length);
+      bewaarSessie(groep.id, goedAantal, sessieWoorden.length);
       setStap("klaar");
     } else {
       setIndex((i) => i + 1);
@@ -207,33 +209,45 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
           </div>
 
           <p style={{ fontFamily: font, fontWeight: 700, color: C.zwart, fontSize: 14, marginBottom: 10 }}>
-            Kies een categorie
+            Kies je groep
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {CATEGORIEEN.map((cat) => {
-              const v = voortgang[cat.id];
+            {GROEPEN.map((g) => {
+              const v = voortgang[g.id];
+              const leeg = g.woorden.length === 0;
               return (
-                <button key={cat.id} onClick={() => startSessie(cat)} style={{
+                <button key={g.id} onClick={() => !leeg && startSessie(g)} disabled={leeg} style={{
                   background: C.wit, border: `1.5px solid ${C.rand}`, borderRadius: 14,
-                  padding: "14px 16px", textAlign: "left", cursor: "pointer",
+                  padding: "14px 16px", textAlign: "left", cursor: leeg ? "default" : "pointer",
                   fontFamily: font, display: "flex", justifyContent: "space-between",
-                  alignItems: "center", gap: 12,
+                  alignItems: "center", gap: 12, opacity: leeg ? 0.55 : 1,
                 }}>
                   <span>
                     <span style={{ fontWeight: 800, fontSize: fs, color: C.zwart, display: "block" }}>
-                      {cat.label}
+                      {g.label}
                     </span>
                     <span style={{ fontSize: 12, color: C.grijs }}>
-                      {cat.niveau} · {cat.woorden.length} woorden · {cat.flitstijd ?? STANDAARD_FLITSTIJD} sec per woord
+                      {leeg
+                        ? "binnenkort"
+                        : `${g.woorden.length} woorden · ${g.flitstijd} sec per woord`}
                     </span>
                   </span>
-                  {v && (
+                  {!leeg && v && (
                     <span style={{
                       background: C.geelLicht, border: `1px solid ${C.geel}`, borderRadius: 99,
                       padding: "2px 10px", fontSize: 11, fontWeight: 700, color: "#92400E",
                       whiteSpace: "nowrap",
                     }}>
                       laatst {v.laatsteScore}/{v.laatsteTotaal}
+                    </span>
+                  )}
+                  {leeg && (
+                    <span style={{
+                      background: C.cremeMid, border: `1px solid ${C.rand}`, borderRadius: 99,
+                      padding: "2px 10px", fontSize: 11, fontWeight: 700, color: C.grijs,
+                      whiteSpace: "nowrap",
+                    }}>
+                      binnenkort
                     </span>
                   )}
                 </button>
@@ -252,7 +266,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
       <div style={pageStyle}>
         <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
-          <SessieBalk categorie={categorie} index={index} totaal={sessieWoorden.length} font={font} />
+          <SessieBalk groep={groep} index={index} totaal={sessieWoorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "48px 24px" }}>
             <p style={{ fontFamily: font, color: C.grijs, fontSize: 13, fontWeight: 700, marginTop: 0, marginBottom: 24 }}>
               Kijk goed…
@@ -280,7 +294,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
       <div style={pageStyle}>
         <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
-          <SessieBalk categorie={categorie} index={index} totaal={sessieWoorden.length} font={font} />
+          <SessieBalk groep={groep} index={index} totaal={sessieWoorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "40px 24px" }}>
             <p style={{ fontFamily: font, fontWeight: 700, color: C.zwart, fontSize: dyslexie ? 19 : 17, marginTop: 0, marginBottom: 20 }}>
               Welk woord zag je? Typ het over.
@@ -299,7 +313,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
                 }}
               />
               <button type="submit" disabled={!invoer.trim()} style={{
-                ...zwarteKnop(font), marginTop: 18, width: "100%",
+                ...primaireKnop(font), marginTop: 18, width: "100%",
                 opacity: invoer.trim() ? 1 : 0.4, cursor: invoer.trim() ? "pointer" : "default",
               }}>
                 Klaar (Enter)
@@ -319,7 +333,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
       <div style={pageStyle}>
         <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
-          <SessieBalk categorie={categorie} index={index} totaal={sessieWoorden.length} font={font} />
+          <SessieBalk groep={groep} index={index} totaal={sessieWoorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "40px 24px" }}>
             {laatste.goed ? (
               <>
@@ -346,7 +360,7 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
                   <VergelijkVak label="Jij typte" woord={laatste.getypt} kleur={C.rood} bg={C.roodLicht} font={font} dyslexie={dyslexie} />
                   <VergelijkVak label="Het woord was" woord={laatste.woord} kleur={C.groen} bg={C.groenLicht} font={font} dyslexie={dyslexie} />
                 </div>
-                <button onClick={volgende} style={{ ...zwarteKnop(font), width: "100%" }}>
+                <button onClick={volgende} style={{ ...primaireKnop(font), width: "100%" }}>
                   Volgende woord →
                 </button>
               </>
@@ -398,11 +412,11 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
             )}
 
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <button onClick={() => startSessie(categorie)} style={{ ...zwarteKnop(font), width: "100%" }}>
-                Nog een keer ({categorie.label})
+              <button onClick={() => startSessie(groep)} style={{ ...primaireKnop(font), width: "100%" }}>
+                Nog een keer ({groep.label})
               </button>
               <button onClick={() => setStap("keuze")} style={{ ...lichteKnop(font), width: "100%" }}>
-                Andere categorie
+                Andere groep
               </button>
               <button onClick={onExit} style={{ ...lichteKnop(font), width: "100%" }}>
                 Terug naar menu
@@ -419,12 +433,12 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit }) {
 }
 
 // ── KLEINE HULPCOMPONENTEN ────────────────────────────────────────────────────
-function SessieBalk({ categorie, index, totaal, font }) {
+function SessieBalk({ groep, index, totaal, font }) {
   return (
     <div style={{ marginBottom: 20 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
         <span style={{ fontFamily: font, fontWeight: 700, color: C.grijs, fontSize: 13 }}>
-          Flitswoorden · {categorie.label}
+          Flitswoorden · {groep.label}
         </span>
         <span style={{ fontFamily: font, fontWeight: 700, color: C.grijs, fontSize: 13 }}>
           {Math.min(index + 1, totaal)}/{totaal}
@@ -449,9 +463,9 @@ function VergelijkVak({ label, woord, kleur, bg, font, dyslexie }) {
 }
 
 // ── KNOPSTIJLEN ───────────────────────────────────────────────────────────────
-function zwarteKnop(font) {
+function primaireKnop(font) {
   return {
-    background: C.zwart, color: C.geel, border: "none", borderRadius: 14,
+    background: C.geel, color: C.zwart, border: `2px solid #D4A800`, borderRadius: 14,
     padding: "14px 28px", fontWeight: 800, fontSize: 16, cursor: "pointer", fontFamily: font,
   };
 }

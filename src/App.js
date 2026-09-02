@@ -305,17 +305,17 @@ export default function SpellingApp() {
         </div>
 
         <button onClick={() => setFase(FASE.FLITSWOORDEN)} style={{
-          background: C.zwart, color: C.geel, border: "none", borderRadius: 16,
+          background: C.geel, color: C.zwart, border: `2px solid #D4A800`, borderRadius: 16,
           padding: "16px 24px", fontWeight: 800, fontSize: 18, cursor: "pointer",
           width: "100%", fontFamily: font, letterSpacing: 0.3,
-          boxShadow: "0 4px 20px rgba(0,0,0,0.15)", transition: "transform 0.1s",
+          boxShadow: "0 4px 16px rgba(245,196,0,0.35)", transition: "transform 0.1s",
           display: "flex", alignItems: "center", gap: 12,
         }}>
           <span style={{ fontSize: 24 }}>⚡</span>
           <span style={{ textAlign: "left", flex: 1 }}>
             Start Flitswoorden
-            <span style={{ display: "block", fontWeight: 600, fontSize: 12, color: "#D9B94A" }}>
-              5 categorieën · groep 3 · 4 · 5
+            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: "#92400E" }}>
+              5 woordcategorieën
             </span>
           </span>
           <span>→</span>
@@ -337,13 +337,13 @@ export default function SpellingApp() {
           </div>
           <p style={{ fontFamily: font, fontSize: 13, color: C.grijs, lineHeight: 1.6, margin: "0 0 12px" }}>
             Hier kun je straks losse spellingregels oefenen — met een korte toets die eerst
-            kijkt wat je al kunt.
+            kijkt wat je al kunt. Voor groep 3 tot en met 8.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-            {[3,4,5].map(g => (
+            {[3,4,5,6,7,8].map(g => (
               <span key={g} style={{ background: C.wit, border: `1px solid ${C.rand}`, borderRadius: 99,
                 padding: "3px 12px", fontFamily: font, fontSize: 12, fontWeight: 700, color: C.grijs }}>
-                Groep {g}: {CATEGORIES.filter(c => c.groep === g).length} onderdelen
+                Groep {g}
               </span>
             ))}
           </div>

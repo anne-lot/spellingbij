@@ -1,28 +1,41 @@
 {
   "standaardFlitstijd": 3,
   "sessieLengte": 12,
+  "flitstijdPerGroep": {
+    "3": 3,
+    "4": 3,
+    "5": 4,
+    "6": 4,
+    "7": 5,
+    "8": 5
+  },
   "flitswoorden": {
     "kort": {
+      "groep": 3,
       "niveau": "groep 3-4",
       "flitstijd": 3,
       "woorden": ["als", "ook", "veel", "weer", "even", "toch", "altijd", "iemand", "iedereen", "allemaal", "misschien", "gewoon", "eigenlijk", "meestal", "zeker"]
     },
     "middel": {
+      "groep": 4,
       "niveau": "groep 4-5",
       "flitstijd": 4,
       "woorden": ["natuurlijk", "waarschijnlijk", "ondertussen", "tegenwoordig", "blijkbaar", "plotseling", "uiteindelijk", "gelukkig", "ongeveer", "trouwens", "tenslotte", "opnieuw"]
     },
     "werkwoorden": {
+      "groep": 4,
       "niveau": "groep 4-5",
       "flitstijd": 3,
       "woorden": ["worden", "blijven", "kunnen", "moeten", "willen", "mogen", "zullen", "hebben"]
     },
     "voorzetsels": {
+      "groep": 5,
       "niveau": "groep 5",
       "flitstijd": 3,
       "woorden": ["zonder", "tussen", "tijdens", "volgens", "ondanks", "behalve", "doordat", "waardoor"]
     },
     "signaalwoorden": {
+      "groep": 5,
       "niveau": "groep 5 (dubbel nuttig: spelling + begrijpend lezen)",
       "flitstijd": 4,
       "woorden": ["want", "omdat", "doordat", "daarom", "hierdoor", "daardoor", "dus", "zodat", "maar", "echter", "terwijl", "daarentegen", "bijvoorbeeld", "zoals", "namelijk", "kortom", "samengevat", "eerst", "daarna", "vervolgens"]
