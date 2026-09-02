@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('toont de startpagina met de diagnosetoets- en flitswoorden-knop', () => {
+test('toont het startscherm met Flitswoorden en een teaser voor de rest', () => {
   render(<App />);
-  expect(screen.getByText(/Start diagnosetoets/i)).toBeInTheDocument();
-  expect(screen.getByText('Flitswoorden')).toBeInTheDocument();
+  expect(screen.getByText(/Start Flitswoorden/i)).toBeInTheDocument();
+  expect(screen.getByText(/Spellingcategorieën oefenen/i)).toBeInTheDocument();
 });

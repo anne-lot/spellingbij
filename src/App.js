@@ -294,71 +294,60 @@ export default function SpellingApp() {
     <div style={pageStyle}>
       <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
       <div style={{ maxWidth: 520, margin: "0 auto", padding: "40px 16px" }}>
-        <div style={{ textAlign: "center", marginBottom: 32 }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
           <Logo size={80} />
           <h1 style={{ fontFamily: font, fontWeight: 800, fontSize: 32, color: C.zwart, margin: "16px 0 8px" }}>
-            Leer spelling <span style={{ color: C.geel }}>stap voor stap</span>
+            Oefen je <span style={{ color: C.geel }}>flitswoorden</span>
           </h1>
-          <p style={{ fontFamily: font, color: C.grijs, fontSize: 16, lineHeight: 1.6, margin: "0 0 8px" }}>
-            De app test eerst wat je al weet. Daarna oefen je alleen wat je nog niet kent.
+          <p style={{ fontFamily: font, color: C.grijs, fontSize: 16, lineHeight: 1.6, margin: 0 }}>
+            Een woord flitst heel even voorbij. Daarna verdwijnt het en typ je het uit je hoofd over.
           </p>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8,
-            background: C.geelLicht, borderRadius: 12, padding: "8px 16px", border: `1px solid ${C.geel}` }}>
-            <span style={{ fontSize: 14 }}>✦</span>
-            <span style={{ fontFamily: font, fontSize: 13, color: "#92400E", fontWeight: 600 }}>
-              Met nonsenswoorden — om te zien of je de regel echt snapt
-            </span>
-          </div>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
-          {[3,4,5].map(g => {
-            const cats = CATEGORIES.filter(c => c.groep === g);
-            const kleur = cats[0].kleur;
-            return (
-              <div key={g} style={{ background: C.wit, border: `1.5px solid ${C.rand}`,
-                borderRadius: 14, padding: "12px 16px", display: "flex", alignItems: "center", gap: 12 }}>
-                <div style={{ background: kleur + "22", borderRadius: 10, padding: "8px 14px",
-                  fontWeight: 800, fontSize: 15, color: kleur, fontFamily: font, whiteSpace: "nowrap" }}>
-                  Groep {g}
-                </div>
-                <span style={{ fontFamily: font, fontSize: 13, color: C.grijs }}>
-                  {cats.map(c => c.naam).join(" · ")}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-
-        <button onClick={() => setFase(FASE.DIAGNOSE)} style={{
-          background: C.zwart, color: C.geel, border: "none", borderRadius: 16,
-          padding: "16px 36px", fontWeight: 800, fontSize: 18, cursor: "pointer",
-          width: "100%", fontFamily: font, letterSpacing: 0.3,
-          boxShadow: "0 4px 20px rgba(0,0,0,0.15)", transition: "transform 0.1s",
-        }}>
-          Start diagnosetoets →
-        </button>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "20px 0 14px" }}>
-          <div style={{ flex: 1, height: 1, background: C.rand }} />
-          <span style={{ fontFamily: font, fontSize: 12, color: C.grijs, fontWeight: 700 }}>of oefen los</span>
-          <div style={{ flex: 1, height: 1, background: C.rand }} />
         </div>
 
         <button onClick={() => setFase(FASE.FLITSWOORDEN)} style={{
-          background: C.wit, color: C.zwart, border: `2px solid ${C.rand}`, borderRadius: 16,
-          padding: "14px 20px", fontWeight: 800, fontSize: 16, cursor: "pointer",
-          width: "100%", fontFamily: font, display: "flex", alignItems: "center", gap: 12,
+          background: C.zwart, color: C.geel, border: "none", borderRadius: 16,
+          padding: "16px 24px", fontWeight: 800, fontSize: 18, cursor: "pointer",
+          width: "100%", fontFamily: font, letterSpacing: 0.3,
+          boxShadow: "0 4px 20px rgba(0,0,0,0.15)", transition: "transform 0.1s",
+          display: "flex", alignItems: "center", gap: 12,
         }}>
-          <span style={{ fontSize: 22 }}>⚡</span>
+          <span style={{ fontSize: 24 }}>⚡</span>
           <span style={{ textAlign: "left", flex: 1 }}>
-            Flitswoorden
-            <span style={{ display: "block", fontWeight: 600, fontSize: 12, color: C.grijs }}>
-              Woord flitst kort · typ het uit je hoofd over
+            Start Flitswoorden
+            <span style={{ display: "block", fontWeight: 600, fontSize: 12, color: "#D9B94A" }}>
+              5 categorieën · groep 3 · 4 · 5
             </span>
           </span>
-          <span style={{ color: C.grijs }}>→</span>
+          <span>→</span>
         </button>
+
+        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "28px 0 14px" }}>
+          <div style={{ flex: 1, height: 1, background: C.rand }} />
+          <span style={{ fontFamily: font, fontSize: 12, color: C.grijs, fontWeight: 700 }}>binnenkort</span>
+          <div style={{ flex: 1, height: 1, background: C.rand }} />
+        </div>
+
+        <div style={{ background: C.cremeMid, border: `1.5px dashed ${C.rand}`, borderRadius: 16,
+          padding: "18px 18px", opacity: 0.95 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+            <span style={{ fontSize: 18 }}>📚</span>
+            <span style={{ fontFamily: font, fontWeight: 800, fontSize: 16, color: C.zwart }}>
+              Spellingcategorieën oefenen
+            </span>
+          </div>
+          <p style={{ fontFamily: font, fontSize: 13, color: C.grijs, lineHeight: 1.6, margin: "0 0 12px" }}>
+            Hier kun je straks losse spellingregels oefenen — met een korte toets die eerst
+            kijkt wat je al kunt, en daarna alleen de regels waar je nog even mee bezig bent.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {[3,4,5].map(g => (
+              <span key={g} style={{ background: C.wit, border: `1px solid ${C.rand}`, borderRadius: 99,
+                padding: "3px 12px", fontFamily: font, fontSize: 12, fontWeight: 700, color: C.grijs }}>
+                Groep {g}: {CATEGORIES.filter(c => c.groep === g).length} onderdelen
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
       <Footer font={font} />
     </div>
