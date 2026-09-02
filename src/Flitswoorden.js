@@ -10,9 +10,10 @@ import flitsData from "./data/flitswoorden.json";
 //   - standaardFlitstijd  : seconden dat een woord getoond wordt (fallback)
 //   - sessieLengte         : aantal woorden per sessie
 //   - flitstijdPerGroep    : flitstijd per groep (3 t/m 8)
-//   - flitswoorden.<cat>   : per categorie een "groep" + "woorden"-lijst; de
-//                            woorden van alle categorieën met dezelfde groep
-//                            worden samengevoegd tot één oefenlijst.
+//   - flitswoorden.<naam>  : per lijstje een "groep" (3 t/m 8) + "woorden"; de
+//                            woorden van alle lijstjes met dezelfde groep worden
+//                            samengevoegd tot één oefenlijst. Nieuwe woorden of
+//                            een nieuw lijstje toevoegen kan hier zonder code.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const OPSLAG_KEY = "spellingbij_flitswoorden_v1";

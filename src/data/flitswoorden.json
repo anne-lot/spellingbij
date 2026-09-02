@@ -10,35 +10,114 @@
     "8": 5
   },
   "flitswoorden": {
-    "kort": {
+    "g3_functiewoorden": {
       "groep": 3,
-      "niveau": "groep 3-4",
-      "flitstijd": 3,
-      "woorden": ["als", "ook", "veel", "weer", "even", "toch", "altijd", "iemand", "iedereen", "allemaal", "misschien", "gewoon", "eigenlijk", "meestal", "zeker"]
+      "woorden": ["als", "ook", "veel", "weer", "even", "toch", "dan", "dus", "nog", "wel", "niet", "heel", "erg", "echt", "pas", "net", "al", "of", "om", "er", "het", "een", "deze", "die", "dit", "dat", "want", "maar", "meer", "zelf"]
     },
-    "middel": {
+    "g3_vraagwoorden": {
+      "groep": 3,
+      "woorden": ["wie", "wat", "waar", "wanneer", "waarom", "hoe", "welke", "hoeveel"]
+    },
+    "g3_tijd": {
+      "groep": 3,
+      "woorden": ["nu", "straks", "later", "eerst", "toen", "vroeger", "vandaag", "morgen", "gisteren", "altijd", "nooit", "soms", "vaak", "meteen", "gauw", "klaar"]
+    },
+    "g3_plek": {
+      "groep": 3,
+      "woorden": ["hier", "daar", "weg", "terug", "samen", "alleen", "boven", "onder", "voor", "achter", "naast", "binnen", "buiten", "links", "rechts"]
+    },
+    "g3_bijvoeglijk": {
+      "groep": 3,
+      "woorden": ["groot", "klein", "hoog", "laag", "dik", "dun", "lang", "kort", "snel", "langzaam", "hard", "zacht", "warm", "koud", "licht", "donker", "nieuw", "oud", "mooi", "lelijk", "blij", "boos", "bang", "moe"]
+    },
+
+    "g4_bijwoorden": {
       "groep": 4,
-      "niveau": "groep 4-5",
-      "flitstijd": 4,
-      "woorden": ["natuurlijk", "waarschijnlijk", "ondertussen", "tegenwoordig", "blijkbaar", "plotseling", "uiteindelijk", "gelukkig", "ongeveer", "trouwens", "tenslotte", "opnieuw"]
+      "woorden": ["natuurlijk", "eigenlijk", "misschien", "gewoon", "helemaal", "vooral", "bijna", "precies", "verder", "ergens", "nergens", "overal", "meestal", "opnieuw", "ongeveer", "trouwens", "plotseling", "gelukkig", "blijkbaar", "tenslotte", "ondertussen", "tegenwoordig", "uiteindelijk", "waarschijnlijk"]
     },
-    "werkwoorden": {
+    "g4_werkwoorden": {
       "groep": 4,
-      "niveau": "groep 4-5",
-      "flitstijd": 3,
-      "woorden": ["worden", "blijven", "kunnen", "moeten", "willen", "mogen", "zullen", "hebben"]
+      "woorden": ["worden", "blijven", "kunnen", "moeten", "willen", "mogen", "zullen", "hebben", "zijn", "gaan", "doen", "komen", "staan", "laten", "maken", "zeggen", "denken", "weten", "zien", "geven", "vinden", "houden", "nemen", "brengen", "krijgen", "lopen", "roepen", "vragen", "helpen", "spelen"]
     },
-    "voorzetsels": {
-      "groep": 5,
-      "niveau": "groep 5",
-      "flitstijd": 3,
-      "woorden": ["zonder", "tussen", "tijdens", "volgens", "ondanks", "behalve", "doordat", "waardoor"]
+    "g4_hoeveelheid": {
+      "groep": 4,
+      "woorden": ["iedereen", "niemand", "allebei", "allemaal", "sommige", "genoeg", "weinig", "minder", "enkele", "beide", "elke", "ieder"]
     },
-    "signaalwoorden": {
+    "g4_schoolwoorden": {
+      "groep": 4,
+      "woorden": ["broertje", "zusje", "meester", "juffrouw", "schooldag", "speelkwartier", "verhaal", "tekening", "rekenen", "lezen", "schrijven", "luisteren", "vertellen", "tekenen", "gymles", "pauze"]
+    },
+
+    "g5_voorzetsels": {
       "groep": 5,
-      "niveau": "groep 5 (dubbel nuttig: spelling + begrijpend lezen)",
-      "flitstijd": 4,
-      "woorden": ["want", "omdat", "doordat", "daarom", "hierdoor", "daardoor", "dus", "zodat", "maar", "echter", "terwijl", "daarentegen", "bijvoorbeeld", "zoals", "namelijk", "kortom", "samengevat", "eerst", "daarna", "vervolgens"]
+      "woorden": ["zonder", "tussen", "tijdens", "volgens", "ondanks", "behalve", "binnen", "buiten", "tegen", "langs", "vanaf", "sinds", "rondom", "tegenover", "namens", "wegens", "dankzij", "gedurende"]
+    },
+    "g5_signaalwoorden": {
+      "groep": 5,
+      "woorden": ["want", "omdat", "doordat", "daarom", "hierdoor", "daardoor", "dus", "zodat", "maar", "echter", "terwijl", "daarentegen", "bijvoorbeeld", "zoals", "namelijk", "kortom", "samengevat", "eerst", "daarna", "vervolgens", "bovendien", "hoewel", "immers", "aangezien", "tenzij", "ofwel", "enerzijds", "anderzijds"]
+    },
+    "g5_ig_lijk": {
+      "groep": 5,
+      "woorden": ["handig", "rustig", "vrolijk", "duidelijk", "moeilijk", "makkelijk", "gezellig", "nodig", "prachtig", "geweldig", "eerlijk", "gevaarlijk", "persoonlijk", "dagelijks", "mogelijk", "onmogelijk", "ongelukkig", "verdrietig", "voorzichtig", "vriendelijk", "verschrikkelijk", "tijdelijk", "eindelijk"]
+    },
+    "g5_schoolwoorden": {
+      "groep": 5,
+      "woorden": ["antwoord", "gedicht", "onderwerp", "hoofdstuk", "bladzijde", "oefening", "opdracht", "uitleg", "voorbeeld", "mening", "verschil", "afspraak"]
+    },
+
+    "g6_tie_woorden": {
+      "groep": 6,
+      "woorden": ["informatie", "vakantie", "politie", "traditie", "portie", "positie", "actie", "reactie", "functie", "natie", "editie", "conditie", "ambitie", "definitie", "emotie", "motivatie", "organisatie", "situatie"]
+    },
+    "g6_leenwoorden": {
+      "groep": 6,
+      "woorden": ["computer", "cadeau", "bureau", "niveau", "restaurant", "garage", "etage", "bagage", "horloge", "journaal", "energie", "kampioen", "miljoen", "seizoen", "museum", "station", "muziek", "fabriek", "techniek", "publiek"]
+    },
+    "g6_au_ou": {
+      "groep": 6,
+      "woorden": ["blauw", "nauw", "benauwd", "koud", "goud", "hout", "zout", "flauw", "rauw", "kabouter", "schouder", "mouw", "vrouw", "saus", "pauze", "applaus", "auto", "koningsblauw"]
+    },
+    "g6_bijvoeglijk": {
+      "groep": 6,
+      "woorden": ["belangrijk", "verschillend", "ingewikkeld", "zelfstandig", "verantwoordelijk", "aanwezig", "afwezig", "tevreden", "nieuwsgierig", "zenuwachtig", "enthousiast", "teleurgesteld", "gemotiveerd", "onafhankelijk"]
+    },
+    "g6_samenstellingen": {
+      "groep": 6,
+      "woorden": ["voetbalveld", "verjaardagsfeest", "schoolplein", "boekenkast", "tandenborstel", "zwembroek", "regenjas", "huiswerk", "weekend", "ochtendpauze", "middagpauze", "speelplaats"]
+    },
+
+    "g7_engelse_woorden": {
+      "groep": 7,
+      "woorden": ["internet", "email", "online", "manager", "laptop", "website", "downloaden", "account", "deadline", "budget", "interview", "sport", "finish"]
+    },
+    "g7_tussenletters": {
+      "groep": 7,
+      "woorden": ["pannenkoek", "krantenkop", "hondenhok", "kippenhok", "eikenboom", "sterrenhemel", "dorpsplein", "stationsplein", "verkeersbord", "verjaardagstaart", "koningshuis", "oorlogsschip", "geluidsoverlast", "zonnestraal"]
+    },
+    "g7_moeilijke_klanken": {
+      "groep": 7,
+      "woorden": ["gymnastiek", "technisch", "chaos", "chirurg", "machine", "chocolade", "machinist", "orkest", "charmant", "horizon", "tropisch", "typisch", "systeem", "symbool", "ritme", "product", "project"]
+    },
+    "g7_langere_woorden": {
+      "groep": 7,
+      "woorden": ["nauwkeurig", "tegelijkertijd", "uitzondering", "herhaling", "vergelijking", "samenwerking", "gebeurtenis", "herinnering", "verwachting", "teleurstelling", "waarschijnlijk", "verantwoordelijkheid"]
+    },
+
+    "g8_schooltaal": {
+      "groep": 8,
+      "woorden": ["samenvatting", "conclusie", "argument", "oorzaak", "gevolg", "verband", "betekenis", "mening", "bewering", "kenmerk", "onderwerp", "alinea", "inhoudsopgave", "standpunt", "hoofdgedachte", "kernzin", "signaalwoord", "bijzin"]
+    },
+    "g8_schoolvakken": {
+      "groep": 8,
+      "woorden": ["geschiedenis", "aardrijkskunde", "natuurkunde", "scheikunde", "biologie", "wiskunde", "techniek", "wetenschap", "maatschappij", "economie"]
+    },
+    "g8_abstracte_woorden": {
+      "groep": 8,
+      "woorden": ["democratie", "regering", "cultuur", "milieu", "klimaat", "organisatie", "communicatie", "ontwikkeling", "samenleving", "verantwoordelijkheid", "mogelijkheid", "werkelijkheid", "gelegenheid", "toekomst"]
+    },
+    "g8_weetwoorden": {
+      "groep": 8,
+      "woorden": ["gebeurd", "veranderd", "verwacht", "bepaald", "herhaald", "vertaald", "gebeurde", "antwoordde", "tenminste", "evenwicht", "benieuwd", "bewust", "sowieso", "nauwelijks"]
     }
   }
 }
