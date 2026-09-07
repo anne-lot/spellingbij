@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# CRA levert al geoptimaliseerde, gehashte bestanden — Netlify hoeft niks
+# na te bewerken (en injecteert dan ook geen extra snippets).
+[build.processing]
+  skip_processing = true
+
 # Single-page app: alle paden naar index.html
 [[redirects]]
   from = "/*"
