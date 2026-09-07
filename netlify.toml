@@ -5,8 +5,8 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# CRA levert al geoptimaliseerde, gehashte bestanden — Netlify hoeft niks
-# na te bewerken (en injecteert dan ook geen extra snippets).
+# CRA levert al geminificeerde, gehashte bestanden — Netlify hoeft die niet
+# nog eens na te bewerken.
 [build.processing]
   skip_processing = true
 
