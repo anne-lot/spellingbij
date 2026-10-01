@@ -1,0 +1,26 @@
+{
+  "categorieen": {
+    "open-lettergreep": { "label": "Open lettergreep", "voorbeeld": "maan, lopen" },
+    "gesloten-lettergreep": { "label": "Gesloten lettergreep", "voorbeeld": "man, kat" },
+    "ei-ij": { "label": "ei/ij", "voorbeeld": "trein, fietsen" },
+    "au-ou": { "label": "au/ou", "voorbeeld": "goud, jongen" },
+    "verdubbeling": { "label": "Medeklinkerverdubbeling", "voorbeeld": "takken, zonnen" },
+    "verscherping": { "label": "b/p en d/t aan het eind", "voorbeeld": "heb/hep, hond/hont" },
+    "stomme-e": { "label": "Stomme e", "voorbeeld": "lade, make" },
+    "ch-g": { "label": "ch/g", "voorbeeld": "licht, groen" },
+    "samenstelling": { "label": "Samenstellingen", "voorbeeld": "voetbal, huiswerk" },
+    "onregelmatig": { "label": "Onregelmatig/hoogfrequent", "voorbeeld": "eigenlijk, natuurlijk" }
+  },
+
+  "_toelichting": {
+    "doel": "Elk woord in de woordenlijsten verwijst met zijn 'categorie'-veld naar een sleutel hierboven. De foutdiagnose en de herhalingsplanning werken per categorie, niet per woord.",
+    "uitbreiden": "Een categorie toevoegen kan hier, zonder codewijziging: voeg een sleutel met label + voorbeeld toe en gebruik die sleutel in de woordenlijsten. Onbekende sleutels in woorddata worden opgevangen door src/data/woorden.js en vallen terug op 'onregelmatig'.",
+    "indelingsregels": [
+      "Een woord kan onder meerdere regels vallen ('goud' is au/ou EN eindigt op een d). We kennen per woord één categorie toe: de spellingregel die het grootste struikelblok vormt.",
+      "Toegepaste prioriteit, hoog naar laag: samenstelling > ei/ij > au/ou > verdubbeling > vaste uitgang -ig/-lijk > verscherping > ch/g > open lettergreep > stomme e > gesloten lettergreep > onregelmatig.",
+      "De uitgangen -ig, -lijk, -heid, -tie en -sie, leenwoorden en Engelse woorden zijn als 'onregelmatig' ingedeeld: voor groep 3-5 bestaat er geen regelcategorie voor. De voorbeelden in de spec ('eigenlijk', 'natuurlijk') volgen diezelfde lijn.",
+      "'sch' valt onder ch/g; een -ng/-nk cluster met slot-g ook ('lang', 'nog').",
+      "Woorden van één lettergreep zonder ander kenmerk zijn gesloten-lettergreep ('kat', 'mooi'); eindigt zo'n woord op een losse klinker, dan open-lettergreep ('nu', 'hoe')."
+    ]
+  }
+}

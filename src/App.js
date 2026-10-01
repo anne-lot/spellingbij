@@ -4,6 +4,8 @@ import {
   Logo, Header, ProgressBar, GroepBadge, Kaart, Footer,
 } from "./theme";
 import Flitswoorden from "./Flitswoorden";
+import Voortgangsoverzicht from "./Voortgangsoverzicht";
+import { registreerPoging } from "./spelling/voortgang";
 
 // ── DATA ──────────────────────────────────────────────────────────────────────
 const CATEGORIES = [
@@ -19,6 +21,28 @@ const CATEGORIES = [
   { id:"verkleinwoord", groep:5, naam:"Verkleinwoorden",             uitleg:"Na p, t, k, f, s + korte klank gebruik je -je. Anders -tje of -pje.",            kleur:C.groen },
   { id:"ig_lijk",       groep:5, naam:"Eindstukken -ig / -lijk",     uitleg:"Klinkt als -ug of -luk, maar schrijf je -ig en -lijk.",                          kleur:C.groen },
 ];
+
+// Koppeling van de oefencategorieën hierboven naar de spellingcategorieën uit
+// src/data/categorieen.json, zodat ook de diagnosetoets en de losse oefeningen
+// de voortgang per spellingregel voeden.
+//
+// De koppeling is met opzet grof: de set uit categorieen.json dekt het groep 3-5
+// curriculum en heeft geen sleutel voor aai/ooi/oei, eeuw/ieuw of verkleinwoorden.
+// Die landen op "onregelmatig" (de weetwoord-bak). Eén plek om bij te stellen
+// zodra de categorieënset wordt uitgebreid.
+const CATEGORIE_KOPPELING = {
+  klankzuiver:   "gesloten-lettergreep",
+  medeklinkers:  "ch-g",            // -nk, -ng, -cht, schr-
+  aai_ooi_oei:   "onregelmatig",
+  eer_oor_eur:   "gesloten-lettergreep",
+  eeuw_ieuw:     "onregelmatig",
+  open_gesloten: "open-lettergreep", // tegenhanger "verdubbeling" zit in dezelfde oefening
+  be_ge_ver:     "stomme-e",         // be-/ge-/ver- is precies het stomme-e probleem
+  ei_ij:         "ei-ij",
+  sv_fv:         "verscherping",     // s/z en f/v is dezelfde stem-wisseling als b/p en d/t
+  verkleinwoord: "onregelmatig",
+  ig_lijk:       "onregelmatig",
+};
 
 const OEFENVRAGEN = {
   klankzuiver: [
@@ -256,7 +280,7 @@ function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
 }
 
 // ── MAIN APP ──────────────────────────────────────────────────────────────────
-const FASE = { HOME:"home", DIAGNOSE:"diagnose", UITSLAG:"uitslag", OEFENEN:"oefenen", KLAAR:"klaar", FLITSWOORDEN:"flitswoorden" };
+const FASE = { HOME:"home", DIAGNOSE:"diagnose", UITSLAG:"uitslag", OEFENEN:"oefenen", KLAAR:"klaar", FLITSWOORDEN:"flitswoorden", VOORTGANG:"voortgang" };
 
 export default function SpellingApp() {
   const [fase, setFase] = useState(FASE.HOME);
@@ -287,7 +311,13 @@ export default function SpellingApp() {
 
   // ── FLITSWOORDEN (losse oefenvorm) ──
   if (fase === FASE.FLITSWOORDEN)
-    return <Flitswoorden font={font} dyslexie={dyslexie} setDyslexie={setDyslexie} onExit={() => setFase(FASE.HOME)} />;
+    return <Flitswoorden font={font} dyslexie={dyslexie} setDyslexie={setDyslexie}
+      onExit={() => setFase(FASE.HOME)} onVoortgang={() => setFase(FASE.VOORTGANG)} />;
+
+  // ── VOORTGANGSOVERZICHT PER SPELLINGCATEGORIE ──
+  if (fase === FASE.VOORTGANG)
+    return <Voortgangsoverzicht font={font} dyslexie={dyslexie} setDyslexie={setDyslexie}
+      onExit={() => setFase(FASE.HOME)} />;
 
   // ── HOME ──
   if (fase === FASE.HOME) return (
@@ -316,6 +346,28 @@ export default function SpellingApp() {
             Start Flitswoorden
             <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.grijs }}>
               5 woordcategorieën
+            </span>
+          </span>
+          <span style={{ color: C.grijs }}>→</span>
+        </button>
+
+        <p style={{ fontFamily: font, fontSize: 12, color: C.grijs, lineHeight: 1.6,
+          margin: "10px 2px 0", textAlign: "center" }}>
+          De app houdt bij welke soort woorden je nog moeilijk vindt en laat die vaker
+          terugkomen — net voordat je ze dreigt te vergeten.
+        </p>
+
+        <button onClick={() => setFase(FASE.VOORTGANG)} style={{
+          background: C.wit, color: C.zwart, border: `1.5px solid ${C.rand}`, borderRadius: 14,
+          padding: "12px 18px", fontWeight: 700, fontSize: 15, cursor: "pointer",
+          width: "100%", fontFamily: font, marginTop: 14,
+          display: "flex", alignItems: "center", gap: 10,
+        }}>
+          <span style={{ fontSize: 20 }}>📊</span>
+          <span style={{ textAlign: "left", flex: 1 }}>
+            Jouw spellingkaart
+            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.grijs }}>
+              zie per soort woord hoe het gaat
             </span>
           </span>
           <span style={{ color: C.grijs }}>→</span>
@@ -360,6 +412,11 @@ export default function SpellingApp() {
     const huidigeVraag = vragen[diagnoseAntw.length];
 
     function verwerkDiagnose(goed) {
+      registreerPoging({
+        woord: huidigeVraag?.a ?? cat.id,
+        categorie: CATEGORIE_KOPPELING[cat.id],
+        correct: goed,
+      });
       const nieuweAntw = [...diagnoseAntw, goed];
       setDiagnoseAntw(nieuweAntw);
       if (nieuweAntw.length >= vragen.length) {
@@ -473,6 +530,11 @@ export default function SpellingApp() {
     const vraag = vragen[vraagIdx];
 
     function verwerkOefen(goed) {
+      registreerPoging({
+        woord: vraag?.a ?? catId,
+        categorie: CATEGORIE_KOPPELING[catId],
+        correct: goed,
+      });
       const huidig = oefenScore[catId] || { goed:0, totaal:0 };
       setOefenScore(prev => ({ ...prev, [catId]: { goed: huidig.goed+(goed?1:0), totaal: huidig.totaal+1 } }));
       if (vraagIdx+1 >= vragen.length) {
