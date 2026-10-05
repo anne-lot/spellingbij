@@ -161,7 +161,11 @@ function NonsensBadge({ font }) {
 }
 
 // ── MEERKEUZE ─────────────────────────────────────────────────────────────────
-function MeerKeuze({ vraag, onAnswer, font, dyslexie }) {
+// Feedback zonder waardeoordeel: een fout gekozen optie krijgt geen rood of ✗,
+// alleen een neutrale markering dat dit de keuze was. Het juiste antwoord is
+// altijd zichtbaar (groen + ✓) — nooit overslaan, want het testeffect werkt pas
+// als de correctie ook echt gezien wordt.
+export function MeerKeuze({ vraag, onAnswer, font, dyslexie }) {
   const [gekozen, setGekozen] = useState(null);
   const opties = useRef(shuffle(vraag.o));
   function kies(opt) {
@@ -184,17 +188,17 @@ function MeerKeuze({ vraag, onAnswer, font, dyslexie }) {
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {opties.current.map(opt => {
           const isGoed = gekozen && opt === vraag.a;
-          const isFout = gekozen === opt && opt !== vraag.a;
+          const isGekozenAnders = gekozen === opt && opt !== vraag.a;
           return (
             <button key={opt} onClick={() => kies(opt)} style={{
-              background: isGoed ? C.groenLicht : isFout ? C.roodLicht : C.wit,
-              border: `2px solid ${isGoed ? C.groen : isFout ? C.rood : C.rand}`,
+              background: isGoed ? C.groenLicht : isGekozenAnders ? C.cremeMid : C.wit,
+              border: `2px solid ${isGoed ? C.groen : isGekozenAnders ? C.grijs : C.rand}`,
               borderRadius: 12, padding: "12px 18px", textAlign: "left",
               fontWeight: 600, fontSize: fs, cursor: gekozen ? "default" : "pointer",
-              color: isGoed ? C.groen : isFout ? C.rood : C.zwart,
+              color: isGoed ? C.groen : C.zwart,
               fontFamily: font, transition: "all 0.15s", lineHeight: dyslexie ? 1.6 : 1.3,
             }}>
-              {opt} {isGoed && "✓"} {isFout && "✗"}
+              {opt} {isGoed && "✓"}
             </button>
           );
         })}
@@ -212,7 +216,10 @@ function MeerKeuze({ vraag, onAnswer, font, dyslexie }) {
 }
 
 // ── SORTEREN ──────────────────────────────────────────────────────────────────
-function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
+// Net als bij MeerKeuze: een verkeerd geplaatst woord krijgt geen rood of ✗,
+// alleen een neutrale kleur. De juiste kolom blijft wel zichtbaar (als label),
+// zodat de correctie nooit wordt overgeslagen.
+export function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
   const [geplaatst, setGeplaatst] = useState({});
   const [klaar, setKlaar] = useState(false);
   const [score, setScore] = useState(null);
@@ -242,13 +249,18 @@ function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
             <div style={{ fontWeight: 700, color: C.grijs, fontSize: 12, marginBottom: 6,
               textTransform: "uppercase", letterSpacing: 1, fontFamily: font }}>{k}</div>
             {Object.entries(geplaatst).filter(([,v]) => v === k).map(([w]) => {
-              const correct = klaar && vraag.woorden.find(x => x.w === w)?.k === k;
+              const juisteKolom = vraag.woorden.find(x => x.w === w)?.k;
+              const correct = klaar && juisteKolom === k;
+              const fout = klaar && !correct;
               return (
-                <div key={w} style={{ background: klaar ? (correct ? C.groenLicht : C.roodLicht) : C.geelLicht,
-                  color: klaar ? (correct ? C.groen : C.rood) : "#92400E",
+                <div key={w} style={{ background: klaar ? (correct ? C.groenLicht : C.cremeMid) : C.geelLicht,
+                  color: klaar ? (correct ? C.groen : C.grijs) : "#92400E",
                   borderRadius: 6, padding: "3px 8px", marginBottom: 3,
                   fontSize: dyslexie ? 15 : 13, fontWeight: 700, fontFamily: font }}>
-                  {w} {klaar && (correct ? "✓" : "✗")}
+                  {w} {correct && "✓"}
+                  {fout && (
+                    <span style={{ fontWeight: 600, opacity: 0.85 }}> · hoort bij {juisteKolom}</span>
+                  )}
                 </div>
               );
             })}
@@ -272,7 +284,7 @@ function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
             fontFamily: font }}>Controleer</button>
       )}
       {klaar && score !== null && (
-        <p style={{ fontWeight: 700, color: score >= Math.ceil(vraag.woorden.length * 0.8) ? C.groen : C.rood,
+        <p style={{ fontWeight: 700, color: score >= Math.ceil(vraag.woorden.length * 0.8) ? C.groen : "#B45309",
           fontSize: 14, marginTop: 8, fontFamily: font }}>{score} van {vraag.woorden.length} goed!</p>
       )}
     </div>
@@ -610,7 +622,7 @@ export default function SpellingApp() {
                     <div key={catId} style={{ marginBottom: 12 }}>
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                         <span style={{ fontFamily: font, fontSize: 13, fontWeight: 600, color: C.zwart }}>{cat?.naam}</span>
-                        <span style={{ fontFamily: font, fontSize: 13, color: p>=75?C.groen:C.rood, fontWeight: 700 }}>{p}%</span>
+                        <span style={{ fontFamily: font, fontSize: 13, color: p>=75?C.groen:"#B45309", fontWeight: 700 }}>{p}%</span>
                       </div>
                       <ProgressBar value={s.goed} max={s.totaal} kleur={p>=75?C.groen:C.geel} />
                     </div>

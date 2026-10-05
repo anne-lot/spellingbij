@@ -76,7 +76,7 @@ export function Header({ dyslexie, setDyslexie, font }) {
             spelling<span style={{ color: C.geel }}>bij</span>
           </span>
           <span style={{ fontFamily: font, fontSize: 11, color: C.grijs, display: "block", marginTop: -2 }}>
-            groep 3 · 4 · 5
+            groep 3 · 4 · 5 · 6 · 7 · 8
           </span>
         </div>
       </div>

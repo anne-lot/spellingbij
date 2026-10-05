@@ -44,10 +44,14 @@ test("een foute poging wordt gekoppeld aan de categorie van het doelwoord", () =
   laatFlitsAflopen();
   typ("zzzzzz");
 
-  // Feedbackscherm laat het verschil zien en benoemt de spellingcategorie.
-  expect(screen.getByText(/Kijk goed naar het verschil/i)).toBeInTheDocument();
+  // Feedbackscherm toont kort en neutraal het juiste woord — geen "fout",
+  // geen rood, geen kruis, en geen uitleg over de categorie (die blijft voor
+  // het keuzescherm/de spellingkaart).
+  expect(screen.getByText(/Dit woord schrijf je zo/i)).toBeInTheDocument();
   expect(screen.getByText(doelwoord)).toBeInTheDocument();
-  expect(screen.getByText(/Dit woord hoort bij/i)).toBeInTheDocument();
+  expect(screen.queryByText(/hoort bij/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/fout/i)).not.toBeInTheDocument();
+  expect(screen.queryByText("✗")).not.toBeInTheDocument();
 
   // En de poging is per categorie geregistreerd.
   const data = leesVoortgang();

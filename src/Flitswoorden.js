@@ -3,7 +3,7 @@ import { C, Kaart, Header, Footer, ProgressBar } from "./theme";
 import {
   GROEPEN, SESSIE_LENGTE, STANDAARD_FLITSTIJD, categorieLabel,
 } from "./data/woorden";
-import { leesVoortgang, registreerPoging, eersteVerschil } from "./spelling/voortgang";
+import { leesVoortgang, registreerPoging } from "./spelling/voortgang";
 import { kiesSessie } from "./spelling/woordkeuze";
 
 // ── FLITSWOORDEN ──────────────────────────────────────────────────────────────
@@ -328,8 +328,6 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit, onVo
   // ── FEEDBACK ──
   if (stap === "feedback") {
     const laatste = resultaten[resultaten.length - 1];
-    // Waar ging het precies mis? Die plek lichten we in beide vakjes uit.
-    const verschilVanaf = laatste.goed ? -1 : eersteVerschil(laatste.woord, laatste.getypt);
     return (
       <div style={pageStyle}>
         <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
@@ -353,21 +351,20 @@ export default function Flitswoorden({ font, dyslexie, setDyslexie, onExit, onVo
               </>
             ) : (
               <>
-                <div style={{ fontSize: 40, marginBottom: 8 }}>👀</div>
-                <p style={{ fontFamily: font, fontWeight: 800, color: "#92400E", fontSize: dyslexie ? 20 : 18, margin: "0 0 18px" }}>
-                  Bijna! Kijk goed naar het verschil.
+                {/* Geen waardeoordeel: geen rood, geen "fout", geen kruis — gewoon
+                    neutraal en kort het juiste woord laten zien. Dat gebeurt hier
+                    altijd, nooit overslaan: die correctie na een ophaalpoging is
+                    wat het testeffect oplevert. */}
+                <div style={{ fontSize: 40, marginBottom: 8 }}>✏️</div>
+                <p style={{ fontFamily: font, fontWeight: 800, color: C.zwart, fontSize: dyslexie ? 20 : 18, margin: "0 0 18px" }}>
+                  Dit woord schrijf je zo:
                 </p>
-                <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 16 }}>
-                  <VergelijkVak label="Jij typte" woord={laatste.getypt} vanaf={verschilVanaf}
-                    kleur={C.rood} bg={C.roodLicht} font={font} dyslexie={dyslexie} />
-                  <VergelijkVak label="Het woord was" woord={laatste.woord} vanaf={verschilVanaf}
+                <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 20 }}>
+                  <VergelijkVak label="Jij typte" woord={laatste.getypt}
+                    kleur={C.grijs} bg={C.cremeMid} font={font} dyslexie={dyslexie} />
+                  <VergelijkVak label="Het woord was" woord={laatste.woord}
                     kleur={C.groen} bg={C.groenLicht} font={font} dyslexie={dyslexie} />
                 </div>
-                <p style={{ fontFamily: font, fontSize: 13, color: C.grijs, margin: "0 0 20px" }}>
-                  Dit woord hoort bij{" "}
-                  <strong style={{ color: C.zwart }}>{categorieLabel(laatste.categorie)}</strong>.
-                  Die categorie komt binnenkort nog eens langs.
-                </p>
                 <button onClick={volgende} style={{ ...primaireKnop(font), width: "100%" }}>
                   Volgende woord →
                 </button>
@@ -469,23 +466,14 @@ function SessieBalk({ groep, index, totaal, font }) {
   );
 }
 
-// `vanaf` is de positie van de eerste afwijking (-1 = geen). Alles vanaf die
-// positie krijgt een onderstreping, zodat het kind ziet wáár het verschil zit.
-function VergelijkVak({ label, woord, vanaf = -1, kleur, bg, font, dyslexie }) {
-  const tekst = woord || "—";
-  const splitsen = vanaf >= 0 && vanaf < tekst.length;
+function VergelijkVak({ label, woord, kleur, bg, font, dyslexie }) {
   return (
     <div style={{ background: bg, border: `2px solid ${kleur}`, borderRadius: 12, padding: "10px 16px", minWidth: 120 }}>
       <div style={{ fontFamily: font, fontSize: 11, fontWeight: 700, color: kleur, textTransform: "uppercase", letterSpacing: 1, marginBottom: 4 }}>
         {label}
       </div>
       <div style={{ fontFamily: font, fontWeight: 800, fontSize: dyslexie ? 20 : 22, color: C.zwart, wordBreak: "break-word" }}>
-        {splitsen ? (
-          <>
-            {tekst.slice(0, vanaf)}
-            <span style={{ color: kleur, borderBottom: `3px solid ${kleur}` }}>{tekst.slice(vanaf)}</span>
-          </>
-        ) : tekst}
+        {woord || "—"}
       </div>
     </div>
   );
