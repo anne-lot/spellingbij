@@ -14,606 +14,1956 @@
       "groep": 3,
       "standaardCategorie": "gesloten-lettergreep",
       "woorden": [
-        { "w": "als", "categorie": "gesloten-lettergreep" },
-        { "w": "ook", "categorie": "gesloten-lettergreep" },
-        { "w": "veel", "categorie": "gesloten-lettergreep" },
-        { "w": "weer", "categorie": "gesloten-lettergreep" },
-        { "w": "even", "categorie": "open-lettergreep" },
-        { "w": "toch", "categorie": "ch-g" },
-        { "w": "dan", "categorie": "gesloten-lettergreep" },
-        { "w": "dus", "categorie": "gesloten-lettergreep" },
-        { "w": "nog", "categorie": "ch-g" },
-        { "w": "wel", "categorie": "gesloten-lettergreep" },
-        { "w": "niet", "categorie": "gesloten-lettergreep" },
-        { "w": "heel", "categorie": "gesloten-lettergreep" },
-        { "w": "erg", "categorie": "ch-g" },
-        { "w": "echt", "categorie": "ch-g" },
-        { "w": "pas", "categorie": "gesloten-lettergreep" },
-        { "w": "net", "categorie": "gesloten-lettergreep" },
-        { "w": "al", "categorie": "gesloten-lettergreep" },
-        { "w": "of", "categorie": "gesloten-lettergreep" },
-        { "w": "om", "categorie": "gesloten-lettergreep" },
-        { "w": "er", "categorie": "gesloten-lettergreep" },
-        { "w": "het", "categorie": "gesloten-lettergreep" },
-        { "w": "een", "categorie": "gesloten-lettergreep" },
-        { "w": "deze", "categorie": "open-lettergreep" },
-        { "w": "die", "categorie": "open-lettergreep" },
-        { "w": "dit", "categorie": "gesloten-lettergreep" },
-        { "w": "dat", "categorie": "gesloten-lettergreep" },
-        { "w": "want", "categorie": "gesloten-lettergreep" },
-        { "w": "maar", "categorie": "gesloten-lettergreep" },
-        { "w": "meer", "categorie": "gesloten-lettergreep" },
-        { "w": "zelf", "categorie": "gesloten-lettergreep" }
+        {
+          "w": "als",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "ook",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "veel",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "weer",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "even",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "toch",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "dan",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "dus",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "nog",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "wel",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "niet",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "heel",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "erg",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "echt",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "pas",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "net",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "al",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "of",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "om",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "er",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "het",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "een",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "deze",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "die",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "dit",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "dat",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "want",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "maar",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "meer",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "zelf",
+          "categorie": "gesloten-lettergreep"
+        }
       ]
     },
     "g3_vraagwoorden": {
       "groep": 3,
       "standaardCategorie": "open-lettergreep",
       "woorden": [
-        { "w": "wie", "categorie": "open-lettergreep" },
-        { "w": "wat", "categorie": "gesloten-lettergreep" },
-        { "w": "waar", "categorie": "gesloten-lettergreep" },
-        { "w": "wanneer", "categorie": "verdubbeling" },
-        { "w": "waarom", "categorie": "samenstelling" },
-        { "w": "hoe", "categorie": "open-lettergreep" },
-        { "w": "welke", "categorie": "stomme-e" },
-        { "w": "hoeveel", "categorie": "stomme-e" }
+        {
+          "w": "wie",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "wat",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "waar",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "wanneer",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "waarom",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "hoe",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "welke",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "hoeveel",
+          "categorie": "stomme-e"
+        }
       ]
     },
     "g3_tijd": {
       "groep": 3,
       "standaardCategorie": "gesloten-lettergreep",
       "woorden": [
-        { "w": "nu", "categorie": "open-lettergreep" },
-        { "w": "straks", "categorie": "gesloten-lettergreep" },
-        { "w": "later", "categorie": "open-lettergreep" },
-        { "w": "eerst", "categorie": "gesloten-lettergreep" },
-        { "w": "toen", "categorie": "gesloten-lettergreep" },
-        { "w": "vroeger", "categorie": "stomme-e" },
-        { "w": "vandaag", "categorie": "ch-g" },
-        { "w": "morgen", "categorie": "stomme-e" },
-        { "w": "gisteren", "categorie": "stomme-e" },
-        { "w": "altijd", "categorie": "ei-ij" },
-        { "w": "nooit", "categorie": "gesloten-lettergreep" },
-        { "w": "soms", "categorie": "gesloten-lettergreep" },
-        { "w": "vaak", "categorie": "gesloten-lettergreep" },
-        { "w": "meteen", "categorie": "open-lettergreep" },
-        { "w": "gauw", "categorie": "au-ou" },
-        { "w": "klaar", "categorie": "gesloten-lettergreep" }
+        {
+          "w": "nu",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "straks",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "later",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "eerst",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "toen",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "vroeger",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "vandaag",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "morgen",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "gisteren",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "altijd",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "nooit",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "soms",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "vaak",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "meteen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "gauw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "klaar",
+          "categorie": "gesloten-lettergreep"
+        }
       ]
     },
     "g3_plek": {
       "groep": 3,
       "standaardCategorie": "gesloten-lettergreep",
       "woorden": [
-        { "w": "hier", "categorie": "gesloten-lettergreep" },
-        { "w": "daar", "categorie": "gesloten-lettergreep" },
-        { "w": "weg", "categorie": "ch-g" },
-        { "w": "terug", "categorie": "ch-g" },
-        { "w": "samen", "categorie": "open-lettergreep" },
-        { "w": "alleen", "categorie": "verdubbeling" },
-        { "w": "boven", "categorie": "open-lettergreep" },
-        { "w": "onder", "categorie": "stomme-e" },
-        { "w": "voor", "categorie": "gesloten-lettergreep" },
-        { "w": "achter", "categorie": "ch-g" },
-        { "w": "naast", "categorie": "gesloten-lettergreep" },
-        { "w": "binnen", "categorie": "verdubbeling" },
-        { "w": "buiten", "categorie": "stomme-e" },
-        { "w": "links", "categorie": "gesloten-lettergreep" },
-        { "w": "rechts", "categorie": "ch-g" }
+        {
+          "w": "hier",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "daar",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "weg",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "terug",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "samen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "alleen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "boven",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "onder",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "voor",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "achter",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "naast",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "binnen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "buiten",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "links",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "rechts",
+          "categorie": "ch-g"
+        }
       ]
     },
     "g3_bijvoeglijk": {
       "groep": 3,
       "standaardCategorie": "gesloten-lettergreep",
       "woorden": [
-        { "w": "groot", "categorie": "gesloten-lettergreep" },
-        { "w": "klein", "categorie": "ei-ij" },
-        { "w": "hoog", "categorie": "ch-g" },
-        { "w": "laag", "categorie": "ch-g" },
-        { "w": "dik", "categorie": "gesloten-lettergreep" },
-        { "w": "dun", "categorie": "gesloten-lettergreep" },
-        { "w": "lang", "categorie": "ch-g" },
-        { "w": "kort", "categorie": "gesloten-lettergreep" },
-        { "w": "snel", "categorie": "gesloten-lettergreep" },
-        { "w": "langzaam", "categorie": "onregelmatig" },
-        { "w": "hard", "categorie": "verscherping" },
-        { "w": "zacht", "categorie": "ch-g" },
-        { "w": "warm", "categorie": "gesloten-lettergreep" },
-        { "w": "koud", "categorie": "au-ou" },
-        { "w": "licht", "categorie": "ch-g" },
-        { "w": "donker", "categorie": "stomme-e" },
-        { "w": "nieuw", "categorie": "gesloten-lettergreep" },
-        { "w": "oud", "categorie": "au-ou" },
-        { "w": "mooi", "categorie": "gesloten-lettergreep" },
-        { "w": "lelijk", "categorie": "onregelmatig" },
-        { "w": "blij", "categorie": "ei-ij" },
-        { "w": "boos", "categorie": "gesloten-lettergreep" },
-        { "w": "bang", "categorie": "ch-g" },
-        { "w": "moe", "categorie": "open-lettergreep" }
+        {
+          "w": "groot",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "klein",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "hoog",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "laag",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "dik",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "dun",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "lang",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "kort",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "snel",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "langzaam",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "hard",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "zacht",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "warm",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "koud",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "licht",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "donker",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "nieuw",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "oud",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "mooi",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "lelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "blij",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "boos",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "bang",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "moe",
+          "categorie": "open-lettergreep"
+        }
       ]
     },
     "g4_bijwoorden": {
       "groep": 4,
-      "standaardCategorie": "onregelmatig",
+      "standaardCategorie": "onveranderlijke-woorden",
       "woorden": [
-        { "w": "natuurlijk", "categorie": "onregelmatig" },
-        { "w": "eigenlijk", "categorie": "onregelmatig" },
-        { "w": "misschien", "categorie": "onregelmatig" },
-        { "w": "gewoon", "categorie": "stomme-e" },
-        { "w": "helemaal", "categorie": "open-lettergreep" },
-        { "w": "vooral", "categorie": "samenstelling" },
-        { "w": "bijna", "categorie": "ei-ij" },
-        { "w": "precies", "categorie": "open-lettergreep" },
-        { "w": "verder", "categorie": "stomme-e" },
-        { "w": "ergens", "categorie": "stomme-e" },
-        { "w": "nergens", "categorie": "stomme-e" },
-        { "w": "overal", "categorie": "open-lettergreep" },
-        { "w": "meestal", "categorie": "onregelmatig" },
-        { "w": "opnieuw", "categorie": "samenstelling" },
-        { "w": "ongeveer", "categorie": "stomme-e" },
-        { "w": "trouwens", "categorie": "au-ou" },
-        { "w": "plotseling", "categorie": "stomme-e" },
-        { "w": "gelukkig", "categorie": "verdubbeling" },
-        { "w": "blijkbaar", "categorie": "ei-ij" },
-        { "w": "tenslotte", "categorie": "verdubbeling" },
-        { "w": "ondertussen", "categorie": "verdubbeling" },
-        { "w": "tegenwoordig", "categorie": "onregelmatig" },
-        { "w": "uiteindelijk", "categorie": "onregelmatig" },
-        { "w": "waarschijnlijk", "categorie": "onregelmatig" }
+        {
+          "w": "natuurlijk",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "eigenlijk",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "misschien",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "gewoon",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "helemaal",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "vooral",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "bijna",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "precies",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "verder",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "ergens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "nergens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "overal",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "meestal",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "opnieuw",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "ongeveer",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "trouwens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "plotseling",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "gelukkig",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "blijkbaar",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tenslotte",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "ondertussen",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tegenwoordig",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "uiteindelijk",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "waarschijnlijk",
+          "categorie": "onveranderlijke-woorden"
+        }
       ]
     },
     "g4_werkwoorden": {
       "groep": 4,
       "standaardCategorie": "open-lettergreep",
       "woorden": [
-        { "w": "worden", "categorie": "stomme-e" },
-        { "w": "blijven", "categorie": "ei-ij" },
-        { "w": "kunnen", "categorie": "verdubbeling" },
-        { "w": "moeten", "categorie": "stomme-e" },
-        { "w": "willen", "categorie": "verdubbeling" },
-        { "w": "mogen", "categorie": "open-lettergreep" },
-        { "w": "zullen", "categorie": "verdubbeling" },
-        { "w": "hebben", "categorie": "verdubbeling" },
-        { "w": "zijn", "categorie": "ei-ij" },
-        { "w": "gaan", "categorie": "gesloten-lettergreep" },
-        { "w": "doen", "categorie": "gesloten-lettergreep" },
-        { "w": "komen", "categorie": "open-lettergreep" },
-        { "w": "staan", "categorie": "gesloten-lettergreep" },
-        { "w": "laten", "categorie": "open-lettergreep" },
-        { "w": "maken", "categorie": "open-lettergreep" },
-        { "w": "zeggen", "categorie": "verdubbeling" },
-        { "w": "denken", "categorie": "stomme-e" },
-        { "w": "weten", "categorie": "open-lettergreep" },
-        { "w": "zien", "categorie": "gesloten-lettergreep" },
-        { "w": "geven", "categorie": "open-lettergreep" },
-        { "w": "vinden", "categorie": "stomme-e" },
-        { "w": "houden", "categorie": "au-ou" },
-        { "w": "nemen", "categorie": "open-lettergreep" },
-        { "w": "brengen", "categorie": "stomme-e" },
-        { "w": "krijgen", "categorie": "ei-ij" },
-        { "w": "lopen", "categorie": "open-lettergreep" },
-        { "w": "roepen", "categorie": "stomme-e" },
-        { "w": "vragen", "categorie": "open-lettergreep" },
-        { "w": "helpen", "categorie": "stomme-e" },
-        { "w": "spelen", "categorie": "open-lettergreep" }
+        {
+          "w": "worden",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "blijven",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "kunnen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "moeten",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "willen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "mogen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "zullen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "hebben",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "zijn",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "gaan",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "doen",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "komen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "staan",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "laten",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "maken",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "zeggen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "denken",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "weten",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "zien",
+          "categorie": "gesloten-lettergreep"
+        },
+        {
+          "w": "geven",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "vinden",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "houden",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "nemen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "brengen",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "krijgen",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "lopen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "roepen",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "vragen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "helpen",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "spelen",
+          "categorie": "open-lettergreep"
+        }
       ]
     },
     "g4_hoeveelheid": {
       "groep": 4,
       "standaardCategorie": "stomme-e",
       "woorden": [
-        { "w": "iedereen", "categorie": "stomme-e" },
-        { "w": "niemand", "categorie": "verscherping" },
-        { "w": "allebei", "categorie": "ei-ij" },
-        { "w": "allemaal", "categorie": "verdubbeling" },
-        { "w": "sommige", "categorie": "verdubbeling" },
-        { "w": "genoeg", "categorie": "ch-g" },
-        { "w": "weinig", "categorie": "ei-ij" },
-        { "w": "minder", "categorie": "stomme-e" },
-        { "w": "enkele", "categorie": "stomme-e" },
-        { "w": "beide", "categorie": "ei-ij" },
-        { "w": "elke", "categorie": "stomme-e" },
-        { "w": "ieder", "categorie": "stomme-e" }
+        {
+          "w": "iedereen",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "niemand",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "allebei",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "allemaal",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "sommige",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "genoeg",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "weinig",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "minder",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "enkele",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "beide",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "elke",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "ieder",
+          "categorie": "stomme-e"
+        }
       ]
     },
     "g4_schoolwoorden": {
       "groep": 4,
       "standaardCategorie": "open-lettergreep",
       "woorden": [
-        { "w": "broertje", "categorie": "onregelmatig" },
-        { "w": "zusje", "categorie": "onregelmatig" },
-        { "w": "meester", "categorie": "stomme-e" },
-        { "w": "juffrouw", "categorie": "au-ou" },
-        { "w": "schooldag", "categorie": "samenstelling" },
-        { "w": "speelkwartier", "categorie": "samenstelling" },
-        { "w": "verhaal", "categorie": "stomme-e" },
-        { "w": "tekening", "categorie": "open-lettergreep" },
-        { "w": "rekenen", "categorie": "open-lettergreep" },
-        { "w": "lezen", "categorie": "open-lettergreep" },
-        { "w": "schrijven", "categorie": "ei-ij" },
-        { "w": "luisteren", "categorie": "stomme-e" },
-        { "w": "vertellen", "categorie": "verdubbeling" },
-        { "w": "tekenen", "categorie": "open-lettergreep" },
-        { "w": "gymles", "categorie": "samenstelling" },
-        { "w": "pauze", "categorie": "au-ou" }
+        {
+          "w": "broertje",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "zusje",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "meester",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "juffrouw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "schooldag",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "speelkwartier",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "verhaal",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "tekening",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "rekenen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "lezen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "schrijven",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "luisteren",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "vertellen",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "tekenen",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "gymles",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "pauze",
+          "categorie": "au-ou"
+        }
       ]
     },
     "g5_voorzetsels": {
       "groep": 5,
-      "standaardCategorie": "open-lettergreep",
+      "standaardCategorie": "onveranderlijke-woorden",
       "woorden": [
-        { "w": "zonder", "categorie": "stomme-e" },
-        { "w": "tussen", "categorie": "verdubbeling" },
-        { "w": "tijdens", "categorie": "ei-ij" },
-        { "w": "volgens", "categorie": "stomme-e" },
-        { "w": "ondanks", "categorie": "onregelmatig" },
-        { "w": "behalve", "categorie": "stomme-e" },
-        { "w": "binnen", "categorie": "verdubbeling" },
-        { "w": "buiten", "categorie": "stomme-e" },
-        { "w": "tegen", "categorie": "open-lettergreep" },
-        { "w": "langs", "categorie": "gesloten-lettergreep" },
-        { "w": "vanaf", "categorie": "samenstelling" },
-        { "w": "sinds", "categorie": "gesloten-lettergreep" },
-        { "w": "rondom", "categorie": "samenstelling" },
-        { "w": "tegenover", "categorie": "open-lettergreep" },
-        { "w": "namens", "categorie": "open-lettergreep" },
-        { "w": "wegens", "categorie": "open-lettergreep" },
-        { "w": "dankzij", "categorie": "ei-ij" },
-        { "w": "gedurende", "categorie": "open-lettergreep" }
+        {
+          "w": "zonder",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tussen",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tijdens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "volgens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "ondanks",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "behalve",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "binnen",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "buiten",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tegen",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "langs",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "vanaf",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "sinds",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "rondom",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tegenover",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "namens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "wegens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "dankzij",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "gedurende",
+          "categorie": "onveranderlijke-woorden"
+        }
       ]
     },
     "g5_signaalwoorden": {
       "groep": 5,
-      "standaardCategorie": "samenstelling",
+      "standaardCategorie": "onveranderlijke-woorden",
       "woorden": [
-        { "w": "want", "categorie": "gesloten-lettergreep" },
-        { "w": "omdat", "categorie": "samenstelling" },
-        { "w": "doordat", "categorie": "samenstelling" },
-        { "w": "daarom", "categorie": "samenstelling" },
-        { "w": "hierdoor", "categorie": "samenstelling" },
-        { "w": "daardoor", "categorie": "samenstelling" },
-        { "w": "dus", "categorie": "gesloten-lettergreep" },
-        { "w": "zodat", "categorie": "samenstelling" },
-        { "w": "maar", "categorie": "gesloten-lettergreep" },
-        { "w": "echter", "categorie": "ch-g" },
-        { "w": "terwijl", "categorie": "ei-ij" },
-        { "w": "daarentegen", "categorie": "samenstelling" },
-        { "w": "bijvoorbeeld", "categorie": "ei-ij" },
-        { "w": "zoals", "categorie": "samenstelling" },
-        { "w": "namelijk", "categorie": "onregelmatig" },
-        { "w": "kortom", "categorie": "samenstelling" },
-        { "w": "samengevat", "categorie": "samenstelling" },
-        { "w": "eerst", "categorie": "gesloten-lettergreep" },
-        { "w": "daarna", "categorie": "samenstelling" },
-        { "w": "vervolgens", "categorie": "stomme-e" },
-        { "w": "bovendien", "categorie": "samenstelling" },
-        { "w": "hoewel", "categorie": "samenstelling" },
-        { "w": "immers", "categorie": "verdubbeling" },
-        { "w": "aangezien", "categorie": "stomme-e" },
-        { "w": "tenzij", "categorie": "ei-ij" },
-        { "w": "ofwel", "categorie": "samenstelling" },
-        { "w": "enerzijds", "categorie": "ei-ij" },
-        { "w": "anderzijds", "categorie": "ei-ij" }
+        {
+          "w": "want",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "omdat",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "doordat",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "daarom",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "hierdoor",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "daardoor",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "dus",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "zodat",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "maar",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "echter",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "terwijl",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "daarentegen",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "bijvoorbeeld",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "zoals",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "namelijk",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "kortom",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "samengevat",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "eerst",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "daarna",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "vervolgens",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "bovendien",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "hoewel",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "immers",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "aangezien",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "tenzij",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "ofwel",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "enerzijds",
+          "categorie": "onveranderlijke-woorden"
+        },
+        {
+          "w": "anderzijds",
+          "categorie": "onveranderlijke-woorden"
+        }
       ]
     },
     "g5_ig_lijk": {
       "groep": 5,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "handig", "categorie": "onregelmatig" },
-        { "w": "rustig", "categorie": "onregelmatig" },
-        { "w": "vrolijk", "categorie": "onregelmatig" },
-        { "w": "duidelijk", "categorie": "onregelmatig" },
-        { "w": "moeilijk", "categorie": "onregelmatig" },
-        { "w": "makkelijk", "categorie": "verdubbeling" },
-        { "w": "gezellig", "categorie": "verdubbeling" },
-        { "w": "nodig", "categorie": "onregelmatig" },
-        { "w": "prachtig", "categorie": "onregelmatig" },
-        { "w": "geweldig", "categorie": "onregelmatig" },
-        { "w": "eerlijk", "categorie": "onregelmatig" },
-        { "w": "gevaarlijk", "categorie": "onregelmatig" },
-        { "w": "persoonlijk", "categorie": "onregelmatig" },
-        { "w": "dagelijks", "categorie": "onregelmatig" },
-        { "w": "mogelijk", "categorie": "onregelmatig" },
-        { "w": "onmogelijk", "categorie": "onregelmatig" },
-        { "w": "ongelukkig", "categorie": "verdubbeling" },
-        { "w": "verdrietig", "categorie": "onregelmatig" },
-        { "w": "voorzichtig", "categorie": "onregelmatig" },
-        { "w": "vriendelijk", "categorie": "onregelmatig" },
-        { "w": "verschrikkelijk", "categorie": "verdubbeling" },
-        { "w": "tijdelijk", "categorie": "onregelmatig" },
-        { "w": "eindelijk", "categorie": "onregelmatig" }
+        {
+          "w": "handig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "rustig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "vrolijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "duidelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "moeilijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "makkelijk",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "gezellig",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "nodig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "prachtig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "geweldig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "eerlijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "gevaarlijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "persoonlijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "dagelijks",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "mogelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "onmogelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "ongelukkig",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "verdrietig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "voorzichtig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "vriendelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "verschrikkelijk",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "tijdelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "eindelijk",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g5_schoolwoorden": {
       "groep": 5,
       "standaardCategorie": "samenstelling",
       "woorden": [
-        { "w": "antwoord", "categorie": "verscherping" },
-        { "w": "gedicht", "categorie": "ch-g" },
-        { "w": "onderwerp", "categorie": "samenstelling" },
-        { "w": "hoofdstuk", "categorie": "samenstelling" },
-        { "w": "bladzijde", "categorie": "samenstelling" },
-        { "w": "oefening", "categorie": "stomme-e" },
-        { "w": "opdracht", "categorie": "ch-g" },
-        { "w": "uitleg", "categorie": "samenstelling" },
-        { "w": "voorbeeld", "categorie": "samenstelling" },
-        { "w": "mening", "categorie": "open-lettergreep" },
-        { "w": "verschil", "categorie": "ch-g" },
-        { "w": "afspraak", "categorie": "samenstelling" }
+        {
+          "w": "antwoord",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "gedicht",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "onderwerp",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "hoofdstuk",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "bladzijde",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "oefening",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "opdracht",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "uitleg",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "voorbeeld",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "mening",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "verschil",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "afspraak",
+          "categorie": "samenstelling"
+        }
       ]
     },
     "g6_tie_woorden": {
       "groep": 6,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "informatie", "categorie": "onregelmatig" },
-        { "w": "vakantie", "categorie": "onregelmatig" },
-        { "w": "politie", "categorie": "onregelmatig" },
-        { "w": "traditie", "categorie": "onregelmatig" },
-        { "w": "portie", "categorie": "onregelmatig" },
-        { "w": "positie", "categorie": "onregelmatig" },
-        { "w": "actie", "categorie": "onregelmatig" },
-        { "w": "reactie", "categorie": "onregelmatig" },
-        { "w": "functie", "categorie": "onregelmatig" },
-        { "w": "natie", "categorie": "onregelmatig" },
-        { "w": "editie", "categorie": "onregelmatig" },
-        { "w": "conditie", "categorie": "onregelmatig" },
-        { "w": "ambitie", "categorie": "onregelmatig" },
-        { "w": "definitie", "categorie": "onregelmatig" },
-        { "w": "emotie", "categorie": "onregelmatig" },
-        { "w": "motivatie", "categorie": "onregelmatig" },
-        { "w": "organisatie", "categorie": "onregelmatig" },
-        { "w": "situatie", "categorie": "onregelmatig" }
+        {
+          "w": "informatie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "vakantie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "politie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "traditie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "portie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "positie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "actie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "reactie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "functie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "natie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "editie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "conditie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "ambitie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "definitie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "emotie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "motivatie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "organisatie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "situatie",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g6_leenwoorden": {
       "groep": 6,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "computer", "categorie": "onregelmatig" },
-        { "w": "cadeau", "categorie": "onregelmatig" },
-        { "w": "bureau", "categorie": "onregelmatig" },
-        { "w": "niveau", "categorie": "onregelmatig" },
-        { "w": "restaurant", "categorie": "onregelmatig" },
-        { "w": "garage", "categorie": "onregelmatig" },
-        { "w": "etage", "categorie": "onregelmatig" },
-        { "w": "bagage", "categorie": "onregelmatig" },
-        { "w": "horloge", "categorie": "onregelmatig" },
-        { "w": "journaal", "categorie": "onregelmatig" },
-        { "w": "energie", "categorie": "onregelmatig" },
-        { "w": "kampioen", "categorie": "onregelmatig" },
-        { "w": "miljoen", "categorie": "onregelmatig" },
-        { "w": "seizoen", "categorie": "onregelmatig" },
-        { "w": "museum", "categorie": "onregelmatig" },
-        { "w": "station", "categorie": "onregelmatig" },
-        { "w": "muziek", "categorie": "onregelmatig" },
-        { "w": "fabriek", "categorie": "onregelmatig" },
-        { "w": "techniek", "categorie": "onregelmatig" },
-        { "w": "publiek", "categorie": "onregelmatig" }
+        {
+          "w": "computer",
+          "categorie": "c-als-s-k"
+        },
+        {
+          "w": "cadeau",
+          "categorie": "c-als-s-k"
+        },
+        {
+          "w": "bureau",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "niveau",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "restaurant",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "garage",
+          "categorie": "leenwoorden-ge"
+        },
+        {
+          "w": "etage",
+          "categorie": "leenwoorden-ge"
+        },
+        {
+          "w": "bagage",
+          "categorie": "leenwoorden-ge"
+        },
+        {
+          "w": "horloge",
+          "categorie": "leenwoorden-ge"
+        },
+        {
+          "w": "journaal",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "energie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "kampioen",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "miljoen",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "seizoen",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "museum",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "station",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "muziek",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "fabriek",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "techniek",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "publiek",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g6_au_ou": {
       "groep": 6,
       "standaardCategorie": "au-ou",
       "woorden": [
-        { "w": "blauw", "categorie": "au-ou" },
-        { "w": "nauw", "categorie": "au-ou" },
-        { "w": "benauwd", "categorie": "au-ou" },
-        { "w": "koud", "categorie": "au-ou" },
-        { "w": "goud", "categorie": "au-ou" },
-        { "w": "hout", "categorie": "au-ou" },
-        { "w": "zout", "categorie": "au-ou" },
-        { "w": "flauw", "categorie": "au-ou" },
-        { "w": "rauw", "categorie": "au-ou" },
-        { "w": "kabouter", "categorie": "au-ou" },
-        { "w": "schouder", "categorie": "au-ou" },
-        { "w": "mouw", "categorie": "au-ou" },
-        { "w": "vrouw", "categorie": "au-ou" },
-        { "w": "saus", "categorie": "au-ou" },
-        { "w": "pauze", "categorie": "au-ou" },
-        { "w": "applaus", "categorie": "au-ou" },
-        { "w": "auto", "categorie": "au-ou" },
-        { "w": "koningsblauw", "categorie": "au-ou" }
+        {
+          "w": "blauw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "nauw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "benauwd",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "koud",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "goud",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "hout",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "zout",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "flauw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "rauw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "kabouter",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "schouder",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "mouw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "vrouw",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "saus",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "pauze",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "applaus",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "auto",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "koningsblauw",
+          "categorie": "au-ou"
+        }
       ]
     },
     "g6_bijvoeglijk": {
       "groep": 6,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "belangrijk", "categorie": "ei-ij" },
-        { "w": "verschillend", "categorie": "verdubbeling" },
-        { "w": "ingewikkeld", "categorie": "verdubbeling" },
-        { "w": "zelfstandig", "categorie": "onregelmatig" },
-        { "w": "verantwoordelijk", "categorie": "onregelmatig" },
-        { "w": "aanwezig", "categorie": "onregelmatig" },
-        { "w": "afwezig", "categorie": "onregelmatig" },
-        { "w": "tevreden", "categorie": "stomme-e" },
-        { "w": "nieuwsgierig", "categorie": "onregelmatig" },
-        { "w": "zenuwachtig", "categorie": "onregelmatig" },
-        { "w": "enthousiast", "categorie": "au-ou" },
-        { "w": "teleurgesteld", "categorie": "verscherping" },
-        { "w": "gemotiveerd", "categorie": "verscherping" },
-        { "w": "onafhankelijk", "categorie": "onregelmatig" }
+        {
+          "w": "belangrijk",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "verschillend",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "ingewikkeld",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "zelfstandig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "verantwoordelijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "aanwezig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "afwezig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "tevreden",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "nieuwsgierig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "zenuwachtig",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "enthousiast",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "teleurgesteld",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "gemotiveerd",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "onafhankelijk",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g6_samenstellingen": {
       "groep": 6,
       "standaardCategorie": "samenstelling",
       "woorden": [
-        { "w": "voetbalveld", "categorie": "samenstelling" },
-        { "w": "verjaardagsfeest", "categorie": "samenstelling" },
-        { "w": "schoolplein", "categorie": "samenstelling" },
-        { "w": "boekenkast", "categorie": "samenstelling" },
-        { "w": "tandenborstel", "categorie": "samenstelling" },
-        { "w": "zwembroek", "categorie": "samenstelling" },
-        { "w": "regenjas", "categorie": "samenstelling" },
-        { "w": "huiswerk", "categorie": "samenstelling" },
-        { "w": "weekend", "categorie": "samenstelling" },
-        { "w": "ochtendpauze", "categorie": "samenstelling" },
-        { "w": "middagpauze", "categorie": "samenstelling" },
-        { "w": "speelplaats", "categorie": "samenstelling" }
+        {
+          "w": "voetbalveld",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "verjaardagsfeest",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "schoolplein",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "boekenkast",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "tandenborstel",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "zwembroek",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "regenjas",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "huiswerk",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "weekend",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "ochtendpauze",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "middagpauze",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "speelplaats",
+          "categorie": "samenstelling"
+        }
       ]
     },
     "g7_engelse_woorden": {
       "groep": 7,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "internet", "categorie": "onregelmatig" },
-        { "w": "email", "categorie": "onregelmatig" },
-        { "w": "online", "categorie": "onregelmatig" },
-        { "w": "manager", "categorie": "onregelmatig" },
-        { "w": "laptop", "categorie": "onregelmatig" },
-        { "w": "website", "categorie": "onregelmatig" },
-        { "w": "downloaden", "categorie": "onregelmatig" },
-        { "w": "account", "categorie": "onregelmatig" },
-        { "w": "deadline", "categorie": "onregelmatig" },
-        { "w": "budget", "categorie": "onregelmatig" },
-        { "w": "interview", "categorie": "onregelmatig" },
-        { "w": "sport", "categorie": "onregelmatig" },
-        { "w": "finish", "categorie": "onregelmatig" }
+        {
+          "w": "internet",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "email",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "online",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "manager",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "laptop",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "website",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "downloaden",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "account",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "deadline",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "budget",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "interview",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "sport",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "finish",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g7_tussenletters": {
       "groep": 7,
       "standaardCategorie": "samenstelling",
       "woorden": [
-        { "w": "pannenkoek", "categorie": "samenstelling" },
-        { "w": "krantenkop", "categorie": "samenstelling" },
-        { "w": "hondenhok", "categorie": "samenstelling" },
-        { "w": "kippenhok", "categorie": "samenstelling" },
-        { "w": "eikenboom", "categorie": "samenstelling" },
-        { "w": "sterrenhemel", "categorie": "samenstelling" },
-        { "w": "dorpsplein", "categorie": "samenstelling" },
-        { "w": "stationsplein", "categorie": "samenstelling" },
-        { "w": "verkeersbord", "categorie": "samenstelling" },
-        { "w": "verjaardagstaart", "categorie": "samenstelling" },
-        { "w": "koningshuis", "categorie": "samenstelling" },
-        { "w": "oorlogsschip", "categorie": "samenstelling" },
-        { "w": "geluidsoverlast", "categorie": "samenstelling" },
-        { "w": "zonnestraal", "categorie": "samenstelling" }
+        {
+          "w": "pannenkoek",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "krantenkop",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "hondenhok",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "kippenhok",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "eikenboom",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "sterrenhemel",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "dorpsplein",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "stationsplein",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "verkeersbord",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "verjaardagstaart",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "koningshuis",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "oorlogsschip",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "geluidsoverlast",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "zonnestraal",
+          "categorie": "samenstelling"
+        }
       ]
     },
     "g7_moeilijke_klanken": {
       "groep": 7,
       "standaardCategorie": "ch-g",
       "woorden": [
-        { "w": "gymnastiek", "categorie": "onregelmatig" },
-        { "w": "technisch", "categorie": "ch-g" },
-        { "w": "chaos", "categorie": "ch-g" },
-        { "w": "chirurg", "categorie": "ch-g" },
-        { "w": "machine", "categorie": "ch-g" },
-        { "w": "chocolade", "categorie": "ch-g" },
-        { "w": "machinist", "categorie": "ch-g" },
-        { "w": "orkest", "categorie": "onregelmatig" },
-        { "w": "charmant", "categorie": "ch-g" },
-        { "w": "horizon", "categorie": "onregelmatig" },
-        { "w": "tropisch", "categorie": "ch-g" },
-        { "w": "typisch", "categorie": "ch-g" },
-        { "w": "systeem", "categorie": "onregelmatig" },
-        { "w": "symbool", "categorie": "onregelmatig" },
-        { "w": "ritme", "categorie": "onregelmatig" },
-        { "w": "product", "categorie": "onregelmatig" },
-        { "w": "project", "categorie": "onregelmatig" }
+        {
+          "w": "gymnastiek",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "technisch",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "chaos",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "chirurg",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "machine",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "chocolade",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "machinist",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "orkest",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "charmant",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "horizon",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "tropisch",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "typisch",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "systeem",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "symbool",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "ritme",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "product",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "project",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g7_langere_woorden": {
       "groep": 7,
       "standaardCategorie": "ei-ij",
       "woorden": [
-        { "w": "nauwkeurig", "categorie": "au-ou" },
-        { "w": "tegelijkertijd", "categorie": "ei-ij" },
-        { "w": "uitzondering", "categorie": "stomme-e" },
-        { "w": "herhaling", "categorie": "open-lettergreep" },
-        { "w": "vergelijking", "categorie": "ei-ij" },
-        { "w": "samenwerking", "categorie": "samenstelling" },
-        { "w": "gebeurtenis", "categorie": "stomme-e" },
-        { "w": "herinnering", "categorie": "verdubbeling" },
-        { "w": "verwachting", "categorie": "ch-g" },
-        { "w": "teleurstelling", "categorie": "verdubbeling" },
-        { "w": "waarschijnlijk", "categorie": "onregelmatig" },
-        { "w": "verantwoordelijkheid", "categorie": "onregelmatig" }
+        {
+          "w": "nauwkeurig",
+          "categorie": "au-ou"
+        },
+        {
+          "w": "tegelijkertijd",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "uitzondering",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "herhaling",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "vergelijking",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "samenwerking",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "gebeurtenis",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "herinnering",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "verwachting",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "teleurstelling",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "waarschijnlijk",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "verantwoordelijkheid",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g8_schooltaal": {
       "groep": 8,
       "standaardCategorie": "samenstelling",
       "woorden": [
-        { "w": "samenvatting", "categorie": "verdubbeling" },
-        { "w": "conclusie", "categorie": "onregelmatig" },
-        { "w": "argument", "categorie": "onregelmatig" },
-        { "w": "oorzaak", "categorie": "samenstelling" },
-        { "w": "gevolg", "categorie": "ch-g" },
-        { "w": "verband", "categorie": "verscherping" },
-        { "w": "betekenis", "categorie": "open-lettergreep" },
-        { "w": "mening", "categorie": "open-lettergreep" },
-        { "w": "bewering", "categorie": "open-lettergreep" },
-        { "w": "kenmerk", "categorie": "samenstelling" },
-        { "w": "onderwerp", "categorie": "samenstelling" },
-        { "w": "alinea", "categorie": "onregelmatig" },
-        { "w": "inhoudsopgave", "categorie": "samenstelling" },
-        { "w": "standpunt", "categorie": "samenstelling" },
-        { "w": "hoofdgedachte", "categorie": "samenstelling" },
-        { "w": "kernzin", "categorie": "samenstelling" },
-        { "w": "signaalwoord", "categorie": "samenstelling" },
-        { "w": "bijzin", "categorie": "samenstelling" }
+        {
+          "w": "samenvatting",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "conclusie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "argument",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "oorzaak",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "gevolg",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "verband",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "betekenis",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "mening",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "bewering",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "kenmerk",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "onderwerp",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "alinea",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "inhoudsopgave",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "standpunt",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "hoofdgedachte",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "kernzin",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "signaalwoord",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "bijzin",
+          "categorie": "samenstelling"
+        }
       ]
     },
     "g8_schoolvakken": {
       "groep": 8,
       "standaardCategorie": "samenstelling",
       "woorden": [
-        { "w": "geschiedenis", "categorie": "ch-g" },
-        { "w": "aardrijkskunde", "categorie": "samenstelling" },
-        { "w": "natuurkunde", "categorie": "samenstelling" },
-        { "w": "scheikunde", "categorie": "samenstelling" },
-        { "w": "biologie", "categorie": "onregelmatig" },
-        { "w": "wiskunde", "categorie": "samenstelling" },
-        { "w": "techniek", "categorie": "onregelmatig" },
-        { "w": "wetenschap", "categorie": "samenstelling" },
-        { "w": "maatschappij", "categorie": "ei-ij" },
-        { "w": "economie", "categorie": "onregelmatig" }
+        {
+          "w": "geschiedenis",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "aardrijkskunde",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "natuurkunde",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "scheikunde",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "biologie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "wiskunde",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "techniek",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "wetenschap",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "maatschappij",
+          "categorie": "ei-ij"
+        },
+        {
+          "w": "economie",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g8_abstracte_woorden": {
       "groep": 8,
       "standaardCategorie": "onregelmatig",
       "woorden": [
-        { "w": "democratie", "categorie": "onregelmatig" },
-        { "w": "regering", "categorie": "open-lettergreep" },
-        { "w": "cultuur", "categorie": "onregelmatig" },
-        { "w": "milieu", "categorie": "onregelmatig" },
-        { "w": "klimaat", "categorie": "onregelmatig" },
-        { "w": "organisatie", "categorie": "onregelmatig" },
-        { "w": "communicatie", "categorie": "onregelmatig" },
-        { "w": "ontwikkeling", "categorie": "verdubbeling" },
-        { "w": "samenleving", "categorie": "open-lettergreep" },
-        { "w": "verantwoordelijkheid", "categorie": "onregelmatig" },
-        { "w": "mogelijkheid", "categorie": "onregelmatig" },
-        { "w": "werkelijkheid", "categorie": "onregelmatig" },
-        { "w": "gelegenheid", "categorie": "onregelmatig" },
-        { "w": "toekomst", "categorie": "onregelmatig" }
+        {
+          "w": "democratie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "regering",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "cultuur",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "milieu",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "klimaat",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "organisatie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "communicatie",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "ontwikkeling",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "samenleving",
+          "categorie": "open-lettergreep"
+        },
+        {
+          "w": "verantwoordelijkheid",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "mogelijkheid",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "werkelijkheid",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "gelegenheid",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "toekomst",
+          "categorie": "onregelmatig"
+        }
       ]
     },
     "g8_weetwoorden": {
       "groep": 8,
       "standaardCategorie": "verscherping",
       "woorden": [
-        { "w": "gebeurd", "categorie": "verscherping" },
-        { "w": "veranderd", "categorie": "verscherping" },
-        { "w": "verwacht", "categorie": "ch-g" },
-        { "w": "bepaald", "categorie": "verscherping" },
-        { "w": "herhaald", "categorie": "verscherping" },
-        { "w": "vertaald", "categorie": "verscherping" },
-        { "w": "gebeurde", "categorie": "stomme-e" },
-        { "w": "antwoordde", "categorie": "verdubbeling" },
-        { "w": "tenminste", "categorie": "samenstelling" },
-        { "w": "evenwicht", "categorie": "samenstelling" },
-        { "w": "benieuwd", "categorie": "verscherping" },
-        { "w": "bewust", "categorie": "stomme-e" },
-        { "w": "sowieso", "categorie": "onregelmatig" },
-        { "w": "nauwelijks", "categorie": "au-ou" }
+        {
+          "w": "gebeurd",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "veranderd",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "verwacht",
+          "categorie": "ch-g"
+        },
+        {
+          "w": "bepaald",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "herhaald",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "vertaald",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "gebeurde",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "antwoordde",
+          "categorie": "verdubbeling"
+        },
+        {
+          "w": "tenminste",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "evenwicht",
+          "categorie": "samenstelling"
+        },
+        {
+          "w": "benieuwd",
+          "categorie": "verscherping"
+        },
+        {
+          "w": "bewust",
+          "categorie": "stomme-e"
+        },
+        {
+          "w": "sowieso",
+          "categorie": "onregelmatig"
+        },
+        {
+          "w": "nauwelijks",
+          "categorie": "au-ou"
+        }
       ]
     }
   }

@@ -1,26 +1,167 @@
 {
   "categorieen": {
-    "open-lettergreep": { "label": "Open lettergreep", "voorbeeld": "maan, lopen" },
-    "gesloten-lettergreep": { "label": "Gesloten lettergreep", "voorbeeld": "man, kat" },
-    "ei-ij": { "label": "ei/ij", "voorbeeld": "trein, fietsen" },
-    "au-ou": { "label": "au/ou", "voorbeeld": "goud, jongen" },
-    "verdubbeling": { "label": "Medeklinkerverdubbeling", "voorbeeld": "takken, zonnen" },
-    "verscherping": { "label": "b/p en d/t aan het eind", "voorbeeld": "heb/hep, hond/hont" },
-    "stomme-e": { "label": "Stomme e", "voorbeeld": "lade, make" },
-    "ch-g": { "label": "ch/g", "voorbeeld": "licht, groen" },
-    "samenstelling": { "label": "Samenstellingen", "voorbeeld": "voetbal, huiswerk" },
-    "onregelmatig": { "label": "Onregelmatig/hoogfrequent", "voorbeeld": "eigenlijk, natuurlijk" }
+    "open-lettergreep": {
+      "label": "Open lettergreep",
+      "voorbeeld": "maan, lopen",
+      "voorbeeldWoorden": [
+        { "woord": "maan", "nadruk": "aa" },
+        { "woord": "lopen", "nadruk": "o" }
+      ]
+    },
+    "gesloten-lettergreep": {
+      "label": "Gesloten lettergreep",
+      "voorbeeld": "man, kat",
+      "voorbeeldWoorden": [
+        { "woord": "man", "nadruk": "a" },
+        { "woord": "kat", "nadruk": "a" }
+      ]
+    },
+    "ei-ij": {
+      "label": "ei/ij",
+      "voorbeeld": "trein, rijden",
+      "voorbeeldWoorden": [
+        { "woord": "trein", "nadruk": "ei" },
+        { "woord": "rijden", "nadruk": "ij" }
+      ]
+    },
+    "au-ou": {
+      "label": "au/ou",
+      "voorbeeld": "blauw, koud",
+      "voorbeeldWoorden": [
+        { "woord": "blauw", "nadruk": "au" },
+        { "woord": "koud", "nadruk": "ou" }
+      ]
+    },
+    "verdubbeling": {
+      "label": "Medeklinkerverdubbeling",
+      "voorbeeld": "takken, zonnen",
+      "voorbeeldWoorden": [
+        { "woord": "takken", "nadruk": "kk" },
+        { "woord": "zonnen", "nadruk": "nn" }
+      ]
+    },
+    "verscherping": {
+      "label": "b/p en d/t aan het eind",
+      "voorbeeld": "heb/hep, hond/hont",
+      "voorbeeldWoorden": [
+        { "woord": "heb", "nadruk": "b" },
+        { "woord": "hond", "nadruk": "d" }
+      ]
+    },
+    "stomme-e": {
+      "label": "Stomme e",
+      "voorbeeld": "lade, bode",
+      "voorbeeldWoorden": [
+        { "woord": "lade", "nadruk": "e" },
+        { "woord": "bode", "nadruk": "e" }
+      ]
+    },
+    "ch-g": {
+      "label": "ch/g",
+      "voorbeeld": "licht, groen",
+      "voorbeeldWoorden": [
+        { "woord": "licht", "nadruk": "ch" },
+        { "woord": "groen", "nadruk": "g" }
+      ]
+    },
+    "samenstelling": {
+      "label": "Samenstellingen",
+      "voorbeeld": "voetbal, huiswerk",
+      "voorbeeldWoorden": [
+        { "woord": "voetbal", "nadruk": null },
+        { "woord": "huiswerk", "nadruk": null }
+      ]
+    },
+    "onregelmatig": {
+      "label": "Onregelmatig/hoogfrequent",
+      "voorbeeld": "eigenlijk, natuurlijk",
+      "voorbeeldWoorden": [
+        { "woord": "eigenlijk", "nadruk": null },
+        { "woord": "natuurlijk", "nadruk": null }
+      ]
+    },
+
+    "onveranderlijke-woorden": {
+      "label": "Onveranderlijke woorden",
+      "groep": 6,
+      "voorbeeld": "zonder, eigenlijk",
+      "voorbeeldWoorden": [
+        { "woord": "zonder", "nadruk": null },
+        { "woord": "eigenlijk", "nadruk": null }
+      ]
+    },
+    "apostrof": {
+      "label": "Apostrof",
+      "groep": 6,
+      "voorbeeld": "auto's, foto's",
+      "voorbeeldWoorden": [
+        { "woord": "auto's", "nadruk": "'s" },
+        { "woord": "foto's", "nadruk": "'s" }
+      ]
+    },
+    "c-als-s-k": {
+      "label": "c als s / c als k",
+      "groep": 6,
+      "voorbeeld": "cent, cadeau",
+      "voorbeeldWoorden": [
+        { "woord": "cent", "nadruk": "c" },
+        { "woord": "cadeau", "nadruk": "c" }
+      ]
+    },
+    "leenwoorden-ge": {
+      "label": "Leenwoorden op -ge",
+      "groep": 6,
+      "voorbeeld": "garage, horloge",
+      "voorbeeldWoorden": [
+        { "woord": "garage", "nadruk": "ge" },
+        { "woord": "horloge", "nadruk": "ge" }
+      ]
+    },
+    "ie-als-i": {
+      "label": "ie-klank als i",
+      "groep": 6,
+      "teControleren": true,
+      "voorbeeld": "",
+      "voorbeeldWoorden": []
+    },
+    "werkwoord-tegenwoordige-tijd": {
+      "label": "Werkwoorden (tegenwoordige tijd)",
+      "groep": 6,
+      "voorbeeld": "ik loop, hij loopt",
+      "voorbeeldWoorden": [
+        { "woord": "ik loop", "nadruk": null },
+        { "woord": "hij loopt", "nadruk": "t" }
+      ]
+    }
+  },
+
+  "uitgeschakeldeCategorieen": {
+    "_toelichting": "Categorieën hier zijn bewust NIET opgenomen in 'categorieen' hierboven, en verschijnen dus nergens in de app (categoriekeuze, Zelf doen, voortgangsoverzicht) — zie src/data/woorden.js: CATEGORIE_SLEUTELS leest alleen 'categorieen'. Verplaats een sleutel naar 'categorieen' zodra je 'm wilt activeren.",
+    "werkwoord-verleden-tijd": {
+      "label": "Werkwoorden: verleden tijd & voltooid deelwoord ('t kofschip)",
+      "groep": 6,
+      "todo": "NIET meegenomen in deze ronde — welke werkwoorden en welke uitzonderingen groep 6 hier precies leert verschilt per methode (Staal, Taal actief, Spelling in beeld, ...). Eerst de gewenste methode/leerlijn kiezen voordat hier content bij komt.",
+      "voorbeeld": "",
+      "voorbeeldWoorden": []
+    }
   },
 
   "_toelichting": {
     "doel": "Elk woord in de woordenlijsten verwijst met zijn 'categorie'-veld naar een sleutel hierboven. De foutdiagnose en de herhalingsplanning werken per categorie, niet per woord.",
     "uitbreiden": "Een categorie toevoegen kan hier, zonder codewijziging: voeg een sleutel met label + voorbeeld toe en gebruik die sleutel in de woordenlijsten. Onbekende sleutels in woorddata worden opgevangen door src/data/woorden.js en vallen terug op 'onregelmatig'.",
+    "voorbeeldWoorden": "Per categorie twee voorbeeldwoorden met een 'nadruk'-veld: het stukje van het woord dat de spellingregel laat zien (bv. de dubbele 'kk' in 'takken'). CategorieOefenen.js maakt dat stukje vetgedrukt met een gele markering. 'nadruk: null' betekent: geen specifiek letterpatroon om te markeren (samenstellingen en onregelmatige woorden hebben geen klankregel, dat is precies hun eigenschap). Zoek-en-markeer gebeurt op de eerste treffer van die substring in het woord — bij deze voorbeeldwoorden komt die maar één keer voor, dus is dat altijd de juiste plek.",
     "indelingsregels": [
       "Een woord kan onder meerdere regels vallen ('goud' is au/ou EN eindigt op een d). We kennen per woord één categorie toe: de spellingregel die het grootste struikelblok vormt.",
       "Toegepaste prioriteit, hoog naar laag: samenstelling > ei/ij > au/ou > verdubbeling > vaste uitgang -ig/-lijk > verscherping > ch/g > open lettergreep > stomme e > gesloten lettergreep > onregelmatig.",
       "De uitgangen -ig, -lijk, -heid, -tie en -sie, leenwoorden en Engelse woorden zijn als 'onregelmatig' ingedeeld: voor groep 3-5 bestaat er geen regelcategorie voor. De voorbeelden in de spec ('eigenlijk', 'natuurlijk') volgen diezelfde lijn.",
       "'sch' valt onder ch/g; een -ng/-nk cluster met slot-g ook ('lang', 'nog').",
       "Woorden van één lettergreep zonder ander kenmerk zijn gesloten-lettergreep ('kat', 'mooi'); eindigt zo'n woord op een losse klinker, dan open-lettergreep ('nu', 'hoe')."
+    ],
+    "groep6": [
+      "'onveranderlijke-woorden', 'apostrof', 'c-als-s-k' en 'leenwoorden-ge' zijn later toegevoegd voor groep 6 (LVS-spellingtoets midden groep 6, zelfgemaakte oefenstof — geen Cito-materiaal). Nieuwe woorden staan in src/data/groep6_nieuw.json, niet hier.",
+      "'onveranderlijke-woorden' hergebruikt bestaande flitswoorden in plaats van ze te dupliceren: alle woorden uit de lijsten g4_bijwoorden, g5_voorzetsels en g5_signaalwoorden in flitswoorden.json zijn hercategoriseerd naar deze sleutel. 'garage', 'etage', 'bagage' en 'horloge' uit g6_leenwoorden zijn hercategoriseerd naar 'leenwoorden-ge'. Dit raakt alleen NIEUWE pogingen; al bestaande voortgang in localStorage van gebruikers staat nog onder de oude categoriesleutel (bv. 'samenstelling') en telt daar gewoon door.",
+      "'ie-als-i' staat met teControleren:true en lege voorbeeldWoorden: ik was niet zeker genoeg over welke woorden groep 6 hier precies leert (verschilt per methode) om zelf voorbeelden te verzinnen. Vul 'voorbeeld' en 'voorbeeldWoorden' hier pas in als je zelf (of een leerkracht) de juiste woorden heeft bepaald.",
+      "'werkwoord-verleden-tijd' ('t kofschip) staat bewust in 'uitgeschakeldeCategorieen' hierboven, niet in 'categorieen' — dus onzichtbaar in de app totdat iemand 'm verplaatst. Verleden tijd/voltooid deelwoord verschilt te veel per lesmethode om nu al in te vullen."
     ]
   }
 }

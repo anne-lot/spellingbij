@@ -4,6 +4,8 @@ import {
   Logo, Header, ProgressBar, GroepBadge, Kaart, Footer,
 } from "./theme";
 import Flitswoorden from "./Flitswoorden";
+import CategorieOefenen from "./CategorieOefenen";
+import ZelfDoen from "./ZelfDoen";
 import Voortgangsoverzicht from "./Voortgangsoverzicht";
 import { registreerPoging } from "./spelling/voortgang";
 
@@ -292,7 +294,7 @@ export function SorteerOefening({ vraag, onAnswer, font, dyslexie }) {
 }
 
 // ── MAIN APP ──────────────────────────────────────────────────────────────────
-const FASE = { HOME:"home", DIAGNOSE:"diagnose", UITSLAG:"uitslag", OEFENEN:"oefenen", KLAAR:"klaar", FLITSWOORDEN:"flitswoorden", VOORTGANG:"voortgang" };
+const FASE = { HOME:"home", DIAGNOSE:"diagnose", UITSLAG:"uitslag", OEFENEN:"oefenen", KLAAR:"klaar", FLITSWOORDEN:"flitswoorden", CATEGORIE:"categorie", ZELFDOEN:"zelfdoen", VOORTGANG:"voortgang" };
 
 export default function SpellingApp() {
   const [fase, setFase] = useState(FASE.HOME);
@@ -324,6 +326,16 @@ export default function SpellingApp() {
   // ── FLITSWOORDEN (losse oefenvorm) ──
   if (fase === FASE.FLITSWOORDEN)
     return <Flitswoorden font={font} dyslexie={dyslexie} setDyslexie={setDyslexie}
+      onExit={() => setFase(FASE.HOME)} onVoortgang={() => setFase(FASE.VOORTGANG)} />;
+
+  // ── CATEGORIE OEFENEN (kies zelf één spellingregel) ──
+  if (fase === FASE.CATEGORIE)
+    return <CategorieOefenen font={font} dyslexie={dyslexie} setDyslexie={setDyslexie}
+      onExit={() => setFase(FASE.HOME)} onVoortgang={() => setFase(FASE.VOORTGANG)} />;
+
+  // ── ZELF DOEN (zelfstandig laten zien wat je kan) ──
+  if (fase === FASE.ZELFDOEN)
+    return <ZelfDoen font={font} dyslexie={dyslexie} setDyslexie={setDyslexie}
       onExit={() => setFase(FASE.HOME)} onVoortgang={() => setFase(FASE.VOORTGANG)} />;
 
   // ── VOORTGANGSOVERZICHT PER SPELLINGCATEGORIE ──
@@ -368,6 +380,38 @@ export default function SpellingApp() {
           De app houdt bij welke soort woorden je nog moeilijk vindt en laat die vaker
           terugkomen — net voordat je ze dreigt te vergeten.
         </p>
+
+        <button onClick={() => setFase(FASE.CATEGORIE)} style={{
+          background: C.wit, color: C.zwart, border: `1.5px solid ${C.rand}`, borderRadius: 14,
+          padding: "12px 18px", fontWeight: 700, fontSize: 15, cursor: "pointer",
+          width: "100%", fontFamily: font, marginTop: 14,
+          display: "flex", alignItems: "center", gap: 10,
+        }}>
+          <span style={{ fontSize: 20 }}>🎯</span>
+          <span style={{ textAlign: "left", flex: 1 }}>
+            Oefen één categorie
+            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.grijs }}>
+              kies zelf welke spellingregel
+            </span>
+          </span>
+          <span style={{ color: C.grijs }}>→</span>
+        </button>
+
+        <button onClick={() => setFase(FASE.ZELFDOEN)} style={{
+          background: C.wit, color: C.zwart, border: `1.5px solid ${C.rand}`, borderRadius: 14,
+          padding: "12px 18px", fontWeight: 700, fontSize: 15, cursor: "pointer",
+          width: "100%", fontFamily: font, marginTop: 14,
+          display: "flex", alignItems: "center", gap: 10,
+        }}>
+          <span style={{ fontSize: 20 }}>🍯</span>
+          <span style={{ textAlign: "left", flex: 1 }}>
+            Zelf doen
+            <span style={{ display: "block", fontWeight: 700, fontSize: 12, color: C.grijs }}>
+              laat zien wat je al kan
+            </span>
+          </span>
+          <span style={{ color: C.grijs }}>→</span>
+        </button>
 
         <button onClick={() => setFase(FASE.VOORTGANG)} style={{
           background: C.wit, color: C.zwart, border: `1.5px solid ${C.rand}`, borderRadius: 14,

@@ -10,7 +10,9 @@ import { leesVoortgang, resetVoortgang, categorieStatus } from "./spelling/voort
 // heet hier "hier kun je nog op oefenen" en een categorie waarin nog niet
 // geoefend is heet "nog niet geoefend" — expliciet géén slechte score.
 
-const STANDEN = {
+// Geëxporteerd zodat CategorieOefenen.js dezelfde kleuren/teksten gebruikt voor
+// zijn voortgangsindicator — één plek voor "wat betekent sterk/gemiddeld/...".
+export const STANDEN = {
   sterk:     { kleur: C.groen,  tekst: "gaat al heel goed",          emoji: "🌟" },
   gemiddeld: { kleur: C.geel,   tekst: "bijna onder de knie",        emoji: "👍" },
   oefenen:   { kleur: "#B45309", tekst: "hier kun je nog op oefenen", emoji: "💪" },

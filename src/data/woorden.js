@@ -21,6 +21,7 @@
 
 import flitsData from "./flitswoorden.json";
 import categorieData from "./categorieen.json";
+import groep6Data from "./groep6_nieuw.json";
 
 export const FALLBACK_CATEGORIE = "onregelmatig";
 
@@ -34,6 +35,24 @@ export function categorieLabel(sleutel) {
 
 export function categorieVoorbeeld(sleutel) {
   return CATEGORIEEN[sleutel]?.voorbeeld ?? "";
+}
+
+// Alleen gezet bij categorieën die aan één specifieke groep hangen (nu de
+// nieuwe groep 6-categorieën). Er is geen groepskeuze in dit scherm — dit is
+// puur een label ("groep 6"), geen filter. null = geen label nodig.
+export function categorieGroep(sleutel) {
+  return CATEGORIEEN[sleutel]?.groep ?? null;
+}
+
+// Voorbeeldwoorden met het stukje dat de regel laat zien, bv.
+// [{ woord:"takken", nadruk:"kk" }, ...] — zie _toelichting in categorieen.json.
+// Valt terug op de losse "voorbeeld"-string (zonder nadruk) als een categorie
+// nog geen voorbeeldWoorden heeft, zodat een handmatig toegevoegde categorie
+// nooit crasht.
+export function categorieVoorbeeldWoorden(sleutel) {
+  const cat = CATEGORIEEN[sleutel];
+  if (cat?.voorbeeldWoorden) return cat.voorbeeldWoorden;
+  return (cat?.voorbeeld ?? "").split(",").map((w) => ({ woord: w.trim(), nadruk: null })).filter((w) => w.woord);
 }
 
 // Instellingen uit de woorddata (ongewijzigd t.o.v. eerder).
@@ -59,9 +78,25 @@ function normaliseerWoord(item, lijstNaam, cfg) {
 }
 
 // Alle woorden uit alle lijsten, platgeslagen.
-export const ALLE_WOORDEN = Object.entries(flitsData.flitswoorden).flatMap(
+const WOORDEN_UIT_FLITSDATA = Object.entries(flitsData.flitswoorden).flatMap(
   ([lijstNaam, cfg]) => (cfg.woorden ?? []).map((item) => normaliseerWoord(item, lijstNaam, cfg))
 );
+
+// Nieuwe (groep 6-)woorden uit src/data/groep6_nieuw.json — alleen de items die
+// al "gecontroleerd": true hebben. Zo blijft nieuwe inhoud onzichtbaar in de
+// app totdat een leerkracht (of jij) 'm heeft nagekeken; het omzetten is dan
+// alleen nog een vlaggetje in die JSON, geen codewijziging.
+const WOORDEN_UIT_GROEP6_NIEUW = (groep6Data.woorden ?? [])
+  .filter((item) => item.gecontroleerd === true)
+  .map((item) => ({
+    woord: item.woord,
+    categorie: CATEGORIEEN[item.categorie] ? item.categorie : FALLBACK_CATEGORIE,
+    groep: 6,
+    lijst: "g6_nieuw",
+    ...(item.hint ? { hint: item.hint } : {}),
+  }));
+
+export const ALLE_WOORDEN = [...WOORDEN_UIT_FLITSDATA, ...WOORDEN_UIT_GROEP6_NIEUW];
 
 // Woorden van één groep. De bronlijsten overlappen deels ("want" staat zowel bij
 // de functiewoorden als bij de signaalwoorden), dus dedupliceren we hier: binnen
@@ -70,6 +105,17 @@ export function woordenVoorGroep(groepNr) {
   const gezien = new Set();
   return ALLE_WOORDEN.filter((w) => {
     if (w.groep !== groepNr || gezien.has(w.woord)) return false;
+    gezien.add(w.woord);
+    return true;
+  });
+}
+
+// Woorden van één spellingcategorie, over alle groepen heen. Zelfde dedup-reden
+// als woordenVoorGroep: een woord kan in meerdere bronlijsten voorkomen.
+export function woordenVoorCategorie(categorieSleutel) {
+  const gezien = new Set();
+  return ALLE_WOORDEN.filter((w) => {
+    if (w.categorie !== categorieSleutel || gezien.has(w.woord)) return false;
     gezien.add(w.woord);
     return true;
   });
