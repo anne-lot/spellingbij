@@ -12,12 +12,11 @@ function metPogingen(pogingen, start = 1_000_000) {
   return data;
 }
 
-// Categorieën die bewust (nog) geen woorden hebben: "apostrof" en "ie-als-i"
-// wachten op het nakijken van src/data/groep6_nieuw.json (gecontroleerd:false
-// houdt ze uit ALLE_WOORDEN), en "werkwoord-tegenwoordige-tijd" is geen
-// woord-categorie maar een zin-categorie (zie src/data/werkwoorden.js) en
-// komt dus per definitie niet in woordenVoorCategorie voor.
-const NOG_GEEN_WOORDEN = ["apostrof", "ie-als-i", "werkwoord-tegenwoordige-tijd"];
+// Categorieën die bewust (nog) geen woorden hebben: "ie-als-i" wacht op eigen
+// (nog te bepalen) voorbeeldwoorden, en "werkwoord-tegenwoordige-tijd" is
+// geen woord-categorie maar een zin-categorie (zie src/data/werkwoorden.js)
+// en komt dus per definitie niet in woordenVoorCategorie voor.
+const NOG_GEEN_WOORDEN = ["ie-als-i", "werkwoord-tegenwoordige-tijd"];
 
 describe("woordenVoorCategorie", () => {
   test("geeft voor elke categorie met woorden een niet-lege, gedupliceerde lijst", () => {

@@ -7,39 +7,33 @@ import groep6Data from "./groep6_nieuw.json";
 // gaat": zolang een item "gecontroleerd": false heeft, mag het nergens in de
 // speelbare woorddata opduiken. Zodra iemand het vlaggetje in
 // groep6_nieuw.json omzet naar true, hoort het er zonder codewijziging bij.
+//
+// De inhoud van groep6_nieuw.json is per 2026-10 nagekeken en op true gezet
+// (zie het commit-bericht); de mechanisme-test hieronder draait daarom op een
+// losse, bewust-gemengde fixture in plaats van op de live inhoud van het
+// bestand — zo blijft deze test ook beschermen tegen een toekomstig nieuw
+// item dat per ongeluk zonder review meeloopt, onafhankelijk van wat er op
+// dit moment in groep6_nieuw.json staat.
+jest.mock("./groep6_nieuw.json", () => ({
+  _toelichting: {},
+  woorden: [
+    { categorie: "apostrof", woord: "GECONTROLEERD_FIXTURE", juisteVorm: "GECONTROLEERD_FIXTURE", gecontroleerd: true },
+    { categorie: "apostrof", woord: "NOG_NIET_FIXTURE", juisteVorm: "NOG_NIET_FIXTURE", gecontroleerd: false },
+  ],
+  zinnen: [
+    { categorie: "werkwoord-tegenwoordige-tijd", zin: "Ik ___ fixture.", juisteVorm: "fix", gecontroleerd: true },
+    { categorie: "werkwoord-tegenwoordige-tijd", zin: "Jij ___ fixture.", juisteVorm: "fixt", gecontroleerd: false },
+  ],
+}));
 
-test("alle items in groep6_nieuw.json staan nu op gecontroleerd:false (nog te reviewen)", () => {
-  const alles = [...groep6Data.woorden, ...groep6Data.zinnen];
-  expect(alles.length).toBeGreaterThan(0);
-  expect(alles.every((item) => item.gecontroleerd === false)).toBe(true);
+test("alleen items met gecontroleerd:true komen in ALLE_WOORDEN terecht", () => {
+  expect(ALLE_WOORDEN.some((w) => w.woord === "GECONTROLEERD_FIXTURE")).toBe(true);
+  expect(ALLE_WOORDEN.some((w) => w.woord === "NOG_NIET_FIXTURE")).toBe(false);
 });
 
-test("ongecontroleerde woorden komen niet in ALLE_WOORDEN voor", () => {
-  const nogTeControleren = new Set(
-    groep6Data.woorden.filter((w) => w.gecontroleerd === false).map((w) => w.woord)
-  );
-  const lekken = ALLE_WOORDEN.filter((w) => nogTeControleren.has(w.woord) && w.lijst === "g6_nieuw");
-  expect(lekken).toEqual([]);
-});
-
-test("ongecontroleerde werkwoordzinnen komen niet in ALLE_WERKWOORDZINNEN voor", () => {
-  expect(ALLE_WERKWOORDZINNEN).toEqual([]); // alles staat nu nog op false
-});
-
-test("elke categorie uit groep6_nieuw.json is een geldige, bestaande categoriesleutel", () => {
-  const sleutels = new Set([...groep6Data.woorden, ...groep6Data.zinnen].map((i) => i.categorie));
-  for (const s of sleutels) expect(CATEGORIE_SLEUTELS).toContain(s);
-});
-
-test("zet je gecontroleerd om naar true, dan wordt een woord meteen speelbaar", () => {
-  // Simuleert precies wat een reviewer doet: het vlaggetje omzetten. We bouwen
-  // hier geen echte module-herlaadtest (JSON-imports zijn statisch), maar
-  // controleren wél dat het filtercriterium exact dat vlaggetje is en niets
-  // extra's — zo weet je zeker dat "true zetten" voldoende is.
-  const woordItem = groep6Data.woorden.find((w) => w.categorie === "apostrof");
-  expect(woordItem.gecontroleerd).toBe(false);
-  const zouDanMeedoen = { ...woordItem, gecontroleerd: true };
-  expect(zouDanMeedoen.gecontroleerd).toBe(true);
+test("alleen zinnen met gecontroleerd:true komen in ALLE_WERKWOORDZINNEN terecht", () => {
+  expect(ALLE_WERKWOORDZINNEN.some((z) => z.juisteVorm === "fix")).toBe(true);
+  expect(ALLE_WERKWOORDZINNEN.some((z) => z.juisteVorm === "fixt")).toBe(false);
 });
 
 describe("werkwoorden.js", () => {
@@ -65,4 +59,13 @@ test("de nieuwe categoriesleutels hebben allemaal een label", () => {
 
 test("'werkwoord-verleden-tijd' (t-kofschip) staat NIET in de actieve categorieën", () => {
   expect(CATEGORIE_SLEUTELS).not.toContain("werkwoord-verleden-tijd");
+});
+
+// Met de mock hierboven is groep6Data zelf ook de fixture — dus geen losse
+// test meer op de live inhoud van het echte bestand in dit bestand. Die hoort
+// (en staat) in src/spelling/categorieOefenen.test.js / zelfDoen.test.js, die
+// via de echte, ongemockte ALLE_WOORDEN/ALLE_WERKWOORDZINNEN lopen.
+test("de fixture zelf gebruikt alleen bestaande categoriesleutels (sanity check op de mock)", () => {
+  const sleutels = new Set([...groep6Data.woorden, ...groep6Data.zinnen].map((i) => i.categorie));
+  for (const s of sleutels) expect(CATEGORIE_SLEUTELS).toContain(s);
 });
