@@ -4,61 +4,329 @@
     "gecontroleerd": "Elk item heeft 'gecontroleerd': false. Zolang dat zo staat, gebruikt de app dit item NIET (zie src/data/woorden.js: filtert op gecontroleerd === true, zelfde mechanisme als src/data/groep6_nieuw.json). Zet 'gecontroleerd' naar true per item zodra een leerkracht (of jij zelf) de inhoud heeft nagekeken — daarna is het item meteen bruikbaar, zonder codewijziging.",
     "velden_woorden": "categorie, woord, juisteVorm (hier gelijk aan 'woord' — geen vervoeging), gecontroleerd. Optioneel: hint (één zin uitleg, neutraal getoond in de oefenmodus)."
   },
-
   "woorden": [
-    { "categorie": "aai-ooi-oei", "woord": "draai", "juisteVorm": "draai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "kraai", "juisteVorm": "kraai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "zwaai", "juisteVorm": "zwaai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "saai", "juisteVorm": "saai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "haai", "juisteVorm": "haai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "taai", "juisteVorm": "taai", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "hooi", "juisteVorm": "hooi", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "kooi", "juisteVorm": "kooi", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "groei", "juisteVorm": "groei", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "bloei", "juisteVorm": "bloei", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "boei", "juisteVorm": "boei", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "roeien", "juisteVorm": "roeien", "gecontroleerd": false },
-    { "categorie": "aai-ooi-oei", "woord": "moeite", "juisteVorm": "moeite", "gecontroleerd": false },
-
-    { "categorie": "eer-oor-eur", "woord": "keer", "juisteVorm": "keer", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "veer", "juisteVorm": "veer", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "beer", "juisteVorm": "beer", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "leer", "juisteVorm": "leer", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "peer", "juisteVorm": "peer", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "oor", "juisteVorm": "oor", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "door", "juisteVorm": "door", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "hoorn", "juisteVorm": "hoorn", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "spoor", "juisteVorm": "spoor", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "poort", "juisteVorm": "poort", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "kleur", "juisteVorm": "kleur", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "deur", "juisteVorm": "deur", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "geur", "juisteVorm": "geur", "gecontroleerd": false },
-    { "categorie": "eer-oor-eur", "woord": "scheur", "juisteVorm": "scheur", "gecontroleerd": false },
-
-    { "categorie": "eeuw-ieuw-uw", "woord": "eeuw", "juisteVorm": "eeuw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "leeuw", "juisteVorm": "leeuw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "meeuw", "juisteVorm": "meeuw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "sneeuw", "juisteVorm": "sneeuw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "kieuw", "juisteVorm": "kieuw", "opmerking": "TE CONTROLEREN: 'kieuw' (kieuw van een vis) is spellingtechnisch een prima ieuw-voorbeeld, maar check of groep 4 het woord kent — anders is het alleen een moeilijk woord, geen herkenbaar voorbeeld.", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "duw", "juisteVorm": "duw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "ruw", "juisteVorm": "ruw", "gecontroleerd": false },
-    { "categorie": "eeuw-ieuw-uw", "woord": "schaduw", "juisteVorm": "schaduw", "gecontroleerd": false },
-
-    { "categorie": "be-ge-ver", "woord": "beloof", "juisteVorm": "beloof", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "behang", "juisteVorm": "behang", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "bewaar", "juisteVorm": "bewaar", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "bedenk", "juisteVorm": "bedenk", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "bekijk", "juisteVorm": "bekijk", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "begin", "juisteVorm": "begin", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "geluk", "juisteVorm": "geluk", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "gebruik", "juisteVorm": "gebruik", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "geloof", "juisteVorm": "geloof", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "gezicht", "juisteVorm": "gezicht", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "gedrag", "juisteVorm": "gedrag", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "verhaal", "juisteVorm": "verhaal", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "verstop", "juisteVorm": "verstop", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "vertel", "juisteVorm": "vertel", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "verzin", "juisteVorm": "verzin", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false },
-    { "categorie": "be-ge-ver", "woord": "vergeet", "juisteVorm": "vergeet", "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.", "gecontroleerd": false }
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "draai",
+      "juisteVorm": "draai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "kraai",
+      "juisteVorm": "kraai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "zwaai",
+      "juisteVorm": "zwaai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "saai",
+      "juisteVorm": "saai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "haai",
+      "juisteVorm": "haai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "taai",
+      "juisteVorm": "taai",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "hooi",
+      "juisteVorm": "hooi",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "kooi",
+      "juisteVorm": "kooi",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "groei",
+      "juisteVorm": "groei",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "bloei",
+      "juisteVorm": "bloei",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "boei",
+      "juisteVorm": "boei",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "roeien",
+      "juisteVorm": "roeien",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "aai-ooi-oei",
+      "woord": "moeite",
+      "juisteVorm": "moeite",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "keer",
+      "juisteVorm": "keer",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "veer",
+      "juisteVorm": "veer",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "beer",
+      "juisteVorm": "beer",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "leer",
+      "juisteVorm": "leer",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "peer",
+      "juisteVorm": "peer",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "oor",
+      "juisteVorm": "oor",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "door",
+      "juisteVorm": "door",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "hoorn",
+      "juisteVorm": "hoorn",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "spoor",
+      "juisteVorm": "spoor",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "poort",
+      "juisteVorm": "poort",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "kleur",
+      "juisteVorm": "kleur",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "deur",
+      "juisteVorm": "deur",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "geur",
+      "juisteVorm": "geur",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eer-oor-eur",
+      "woord": "scheur",
+      "juisteVorm": "scheur",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "eeuw",
+      "juisteVorm": "eeuw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "leeuw",
+      "juisteVorm": "leeuw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "meeuw",
+      "juisteVorm": "meeuw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "sneeuw",
+      "juisteVorm": "sneeuw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "kieuw",
+      "juisteVorm": "kieuw",
+      "opmerking": "TE CONTROLEREN: 'kieuw' (kieuw van een vis) is spellingtechnisch een prima ieuw-voorbeeld, maar check of groep 4 het woord kent — anders is het alleen een moeilijk woord, geen herkenbaar voorbeeld.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "duw",
+      "juisteVorm": "duw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "ruw",
+      "juisteVorm": "ruw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "eeuw-ieuw-uw",
+      "woord": "schaduw",
+      "juisteVorm": "schaduw",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "beloof",
+      "juisteVorm": "beloof",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "behang",
+      "juisteVorm": "behang",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "bewaar",
+      "juisteVorm": "bewaar",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "bedenk",
+      "juisteVorm": "bedenk",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "bekijk",
+      "juisteVorm": "bekijk",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "begin",
+      "juisteVorm": "begin",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "geluk",
+      "juisteVorm": "geluk",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "gebruik",
+      "juisteVorm": "gebruik",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "geloof",
+      "juisteVorm": "geloof",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "gezicht",
+      "juisteVorm": "gezicht",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "gedrag",
+      "juisteVorm": "gedrag",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "verhaal",
+      "juisteVorm": "verhaal",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "verstop",
+      "juisteVorm": "verstop",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "vertel",
+      "juisteVorm": "vertel",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "verzin",
+      "juisteVorm": "verzin",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    },
+    {
+      "categorie": "be-ge-ver",
+      "woord": "vergeet",
+      "juisteVorm": "vergeet",
+      "hint": "Je hoort 'bu-/gu-/vur-', maar je schrijft be-/ge-/ver-.",
+      "gecontroleerd": true
+    }
   ]
 }

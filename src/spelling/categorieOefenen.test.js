@@ -13,12 +13,10 @@ function metPogingen(pogingen, start = 1_000_000) {
 }
 
 // Categorieën die bewust (nog) geen woorden hebben: "ie-als-i" wacht op eigen
-// (nog te bepalen) voorbeeldwoorden, "werkwoord-tegenwoordige-tijd" is geen
-// woord-categorie maar een zin-categorie (zie src/data/werkwoorden.js), en
-// "be-ge-ver" is volledig nieuwe groep4-content die nog op review wacht
-// (geen bestaand woord kon er zonder kwaliteitsverlies voor hergebruikt
-// worden — zie categorieen.json's _toelichting.groep4).
-const NOG_GEEN_WOORDEN = ["ie-als-i", "werkwoord-tegenwoordige-tijd", "be-ge-ver"];
+// (nog te bepalen) voorbeeldwoorden, en "werkwoord-tegenwoordige-tijd" is
+// geen woord-categorie maar een zin-categorie (zie src/data/werkwoorden.js).
+// "be-ge-ver" (groep4) is inmiddels ook gereviewd en dus niet meer leeg.
+const NOG_GEEN_WOORDEN = ["ie-als-i", "werkwoord-tegenwoordige-tijd"];
 
 describe("woordenVoorCategorie", () => {
   test("geeft voor elke categorie met woorden een niet-lege, gedupliceerde lijst", () => {
