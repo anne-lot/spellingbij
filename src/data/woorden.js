@@ -21,6 +21,7 @@
 
 import flitsData from "./flitswoorden.json";
 import categorieData from "./categorieen.json";
+import groep4Data from "./groep4_nieuw.json";
 import groep6Data from "./groep6_nieuw.json";
 
 export const FALLBACK_CATEGORIE = "onregelmatig";
@@ -82,21 +83,28 @@ const WOORDEN_UIT_FLITSDATA = Object.entries(flitsData.flitswoorden).flatMap(
   ([lijstNaam, cfg]) => (cfg.woorden ?? []).map((item) => normaliseerWoord(item, lijstNaam, cfg))
 );
 
-// Nieuwe (groep 6-)woorden uit src/data/groep6_nieuw.json — alleen de items die
-// al "gecontroleerd": true hebben. Zo blijft nieuwe inhoud onzichtbaar in de
-// app totdat een leerkracht (of jij) 'm heeft nagekeken; het omzetten is dan
-// alleen nog een vlaggetje in die JSON, geen codewijziging.
-const WOORDEN_UIT_GROEP6_NIEUW = (groep6Data.woorden ?? [])
-  .filter((item) => item.gecontroleerd === true)
-  .map((item) => ({
-    woord: item.woord,
-    categorie: CATEGORIEEN[item.categorie] ? item.categorie : FALLBACK_CATEGORIE,
-    groep: 6,
-    lijst: "g6_nieuw",
-    ...(item.hint ? { hint: item.hint } : {}),
-  }));
+// Nieuwe woorden uit een review-bestand (groep4_nieuw.json, groep6_nieuw.json,
+// ...) — alleen de items die al "gecontroleerd": true hebben. Zo blijft nieuwe
+// inhoud onzichtbaar in de app totdat een leerkracht (of jij) 'm heeft
+// nagekeken; het omzetten is dan alleen nog een vlaggetje in die JSON, geen
+// codewijziging.
+function woordenUitReviewBestand(data, groep, lijstNaam) {
+  return (data.woorden ?? [])
+    .filter((item) => item.gecontroleerd === true)
+    .map((item) => ({
+      woord: item.woord,
+      categorie: CATEGORIEEN[item.categorie] ? item.categorie : FALLBACK_CATEGORIE,
+      groep,
+      lijst: lijstNaam,
+      ...(item.hint ? { hint: item.hint } : {}),
+    }));
+}
 
-export const ALLE_WOORDEN = [...WOORDEN_UIT_FLITSDATA, ...WOORDEN_UIT_GROEP6_NIEUW];
+export const ALLE_WOORDEN = [
+  ...WOORDEN_UIT_FLITSDATA,
+  ...woordenUitReviewBestand(groep4Data, 4, "g4_nieuw"),
+  ...woordenUitReviewBestand(groep6Data, 6, "g6_nieuw"),
+];
 
 // Woorden van één groep. De bronlijsten overlappen deels ("want" staat zowel bij
 // de functiewoorden als bij de signaalwoorden), dus dedupliceren we hier: binnen

@@ -132,6 +132,43 @@
         { "woord": "ik loop", "nadruk": null },
         { "woord": "hij loopt", "nadruk": "t" }
       ]
+    },
+
+    "aai-ooi-oei": {
+      "label": "aai / ooi / oei",
+      "groep": 4,
+      "voorbeeld": "mooi, groei",
+      "voorbeeldWoorden": [
+        { "woord": "mooi", "nadruk": "ooi" },
+        { "woord": "groei", "nadruk": "oei" }
+      ]
+    },
+    "eer-oor-eur": {
+      "label": "eer / oor / eur",
+      "groep": 4,
+      "voorbeeld": "deur, voor",
+      "voorbeeldWoorden": [
+        { "woord": "deur", "nadruk": "eur" },
+        { "woord": "voor", "nadruk": "oor" }
+      ]
+    },
+    "eeuw-ieuw-uw": {
+      "label": "eeuw / ieuw / uw",
+      "groep": 4,
+      "voorbeeld": "nieuw, leeuw",
+      "voorbeeldWoorden": [
+        { "woord": "nieuw", "nadruk": "ieuw" },
+        { "woord": "leeuw", "nadruk": "eeuw" }
+      ]
+    },
+    "be-ge-ver": {
+      "label": "be- / ge- / ver-",
+      "groep": 4,
+      "voorbeeld": "geluk, verhaal",
+      "voorbeeldWoorden": [
+        { "woord": "geluk", "nadruk": "ge" },
+        { "woord": "verhaal", "nadruk": "ver" }
+      ]
     }
   },
 
@@ -162,6 +199,11 @@
       "'onveranderlijke-woorden' hergebruikt bestaande flitswoorden in plaats van ze te dupliceren: alle woorden uit de lijsten g4_bijwoorden, g5_voorzetsels en g5_signaalwoorden in flitswoorden.json zijn hercategoriseerd naar deze sleutel. 'garage', 'etage', 'bagage' en 'horloge' uit g6_leenwoorden zijn hercategoriseerd naar 'leenwoorden-ge'. Dit raakt alleen NIEUWE pogingen; al bestaande voortgang in localStorage van gebruikers staat nog onder de oude categoriesleutel (bv. 'samenstelling') en telt daar gewoon door.",
       "'ie-als-i' staat met teControleren:true en lege voorbeeldWoorden: ik was niet zeker genoeg over welke woorden groep 6 hier precies leert (verschilt per methode) om zelf voorbeelden te verzinnen. Vul 'voorbeeld' en 'voorbeeldWoorden' hier pas in als je zelf (of een leerkracht) de juiste woorden heeft bepaald.",
       "'werkwoord-verleden-tijd' ('t kofschip) staat bewust in 'uitgeschakeldeCategorieen' hierboven, niet in 'categorieen' — dus onzichtbaar in de app totdat iemand 'm verplaatst. Verleden tijd/voltooid deelwoord verschilt te veel per lesmethode om nu al in te vullen."
+    ],
+    "groep4": [
+      "'aai-ooi-oei', 'eer-oor-eur', 'eeuw-ieuw-uw' en 'be-ge-ver' zijn later toegevoegd voor groep 4 (LVS-spellingtoets M4, zelfgemaakte oefenstof — geen Cito-materiaal). Deze stof bestond al als losse, niet-verbonden oefenvragen in App.js (de oude Diagnosetoets); deze categorieën maken 'm onderdeel van het categoriesysteem (gespreide herhaling, Oefen één categorie, Zelf doen). Nieuwe woorden staan in src/data/groep4_nieuw.json, niet hier.",
+      "Een handvol bestaande flitswoorden is hergebruikt (hercategoriseerd, niet gedupliceerd): 'mooi' en 'nooit' -> aai-ooi-oei; 'weer', 'meer', 'eerst' en 'voor' -> eer-oor-eur; 'nieuw' -> eeuw-ieuw-uw. Voor 'be-ge-ver' bestond geen schone, groep4-passende match in de bestaande data (de meeste be-/ge-/ver-woorden die er al waren zijn óf te abstract voor groep 4, óf dienden al als voorbeeld van een andere regel); die categorie is dus volledig nieuw.",
+      "'eeuw-ieuw-uw' heeft minder voorbeeldwoorden dan de andere drie (9 i.p.v. 15+): dit klankpatroon komt in het Nederlands simpelweg in minder veelvoorkomende, groep4-geschikte woorden voor. 'auw'/'ouw'-woorden (pauw, nauw) zijn bewust NIET hieraan toegevoegd — die horen al bij de bestaande categorie 'au-ou', en dubbel categoriseren zou verwarrend zijn."
     ]
   }
 }
