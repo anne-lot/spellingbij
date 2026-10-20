@@ -4,10 +4,15 @@ import { registreerPoging, resetVoortgang } from './spelling/voortgang';
 
 beforeEach(() => resetVoortgang());
 
-test('toont het startscherm met Flitswoorden en een teaser voor de rest', () => {
+test('toont het startscherm met alle vier de ingangen, geen "binnenkort"-tegel meer', () => {
   render(<App />);
   expect(screen.getByText(/Start Flitswoorden/i)).toBeInTheDocument();
-  expect(screen.getByText(/Spellingcategorieën oefenen/i)).toBeInTheDocument();
+  expect(screen.getByText(/Oefen één categorie/i)).toBeInTheDocument();
+  expect(screen.getByText(/^Zelf doen$/i)).toBeInTheDocument();
+  expect(screen.getByText(/Jouw spellingkaart/i)).toBeInTheDocument();
+  // De oude teaser adverteerde precies wat "Oefen één categorie" nu al doet.
+  expect(screen.queryByText(/binnenkort/i)).not.toBeInTheDocument();
+  expect(screen.queryByText(/Spellingcategorieën oefenen/i)).not.toBeInTheDocument();
 });
 
 test('de spellingkaart is leeg zolang er niet geoefend is', () => {
