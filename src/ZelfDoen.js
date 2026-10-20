@@ -135,9 +135,7 @@ export default function ZelfDoen({ font, dyslexie, setDyslexie, onExit, onVoortg
             {geoefend ? (
               <>
                 <p style={{ fontFamily: font, color: C.grijs, fontSize: 15, lineHeight: 1.7, margin: "0 0 20px" }}>
-                  Laat zelf zien wat je al kan! Je krijgt {AANTAL_ITEMS} woorden uit de categorieën
-                  die je al oefende. Geen hulp, geen herkansing — gewoon doen wat je kan.
-                  Elke cel in de honingraat hierboven staat voor één woord.
+                  Je krijgt {AANTAL_ITEMS} woorden die je al hebt geoefend.
                 </p>
                 <button onClick={begin} style={{ ...primaireKnop(font), width: "100%" }}>
                   Beginnen 🍯
