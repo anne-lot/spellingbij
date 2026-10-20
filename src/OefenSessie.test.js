@@ -49,3 +49,42 @@ test("geen hint-regel als het woord geen hint heeft", () => {
   fireEvent.click(screen.getByText(/Klaar \(Enter\)/i));
   expect(screen.queryByText("💡")).not.toBeInTheDocument();
 });
+
+test("het invoerveld toont geen instructietekst, alleen het lege vak", () => {
+  render(<OefenSessie {...props} />);
+  laatFlitsAflopen();
+  expect(screen.queryByText(/Welk woord zag je/i)).not.toBeInTheDocument();
+  expect(screen.getByRole("textbox")).toBeInTheDocument();
+});
+
+test("op Enter drukken na een fout antwoord gaat door naar het volgende woord, zonder muis", () => {
+  render(<OefenSessie {...props} woorden={[
+    { woord: "auto's", categorie: "apostrof" },
+    { woord: "foto's", categorie: "apostrof" },
+  ]} />);
+  laatFlitsAflopen();
+  fireEvent.change(screen.getByRole("textbox"), { target: { value: "autos" } });
+  fireEvent.click(screen.getByText(/Klaar \(Enter\)/i));
+
+  expect(screen.getByText(/Jij typte/i)).toBeInTheDocument(); // op het feedbackscherm
+  fireEvent.keyDown(window, { key: "Enter" });
+  laatFlitsAflopen();
+  expect(screen.getByRole("textbox")).toBeInTheDocument(); // alweer bij het volgende woord
+});
+
+test("Enter heeft geen effect op het feedbackscherm na een goed antwoord (alleen bij fout zit er een listener)", () => {
+  render(<OefenSessie {...props} woorden={[
+    { woord: "auto's", categorie: "apostrof" },
+    { woord: "foto's", categorie: "apostrof" },
+  ]} />);
+  laatFlitsAflopen();
+  fireEvent.change(screen.getByRole("textbox"), { target: { value: "auto's" } });
+  fireEvent.click(screen.getByText(/Klaar \(Enter\)/i));
+  expect(screen.getByText("Goed zo!")).toBeInTheDocument();
+
+  // Direct na Enter staan we nog steeds op dit feedbackscherm: er hangt hier
+  // geen keydown-listener aan (die zit alleen op de fout-tak), dus niets
+  // springt vooruit buiten de eigen automatische timer om.
+  fireEvent.keyDown(window, { key: "Enter" });
+  expect(screen.getByText("Goed zo!")).toBeInTheDocument();
+});

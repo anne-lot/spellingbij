@@ -93,7 +93,7 @@ export default function Voortgangsoverzicht({ font, dyslexie, setDyslexie, onExi
 
   return (
     <div style={{ minHeight: "100vh", background: C.creme, fontFamily: font }}>
-      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "32px 16px" }}>
         <button onClick={onExit} style={{
           background: "none", border: "none", color: C.grijs, fontFamily: font,

@@ -108,6 +108,19 @@ export default function OefenSessie({
     }
   }, [stap]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Enter op het feedbackscherm na een fout antwoord doet hetzelfde als op
+  //    "Volgende woord" klikken — geen muis nodig om door te gaan. ──
+  useEffect(() => {
+    if (stap !== "feedback") return;
+    const laatste = resultaten[resultaten.length - 1];
+    if (!laatste || laatste.goed) return;
+    function opEnter(e) {
+      if (e.key === "Enter") volgende();
+    }
+    window.addEventListener("keydown", opEnter);
+    return () => window.removeEventListener("keydown", opEnter);
+  }, [stap]); // eslint-disable-line react-hooks/exhaustive-deps
+
   function bevestig() {
     if (!invoer.trim()) return;
     const goed = normaliseer(invoer) === normaliseer(huidigWoord);
@@ -135,7 +148,7 @@ export default function OefenSessie({
   if (woorden.length === 0) {
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "32px 16px" }}>
           <Kaart style={{ textAlign: "center" }}>
             <p style={{ fontFamily: font, color: C.grijs, fontSize: 15 }}>
@@ -155,7 +168,7 @@ export default function OefenSessie({
   if (stap === "flits") {
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <SessieBalk titel={titel} index={index} totaal={woorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "48px 24px" }}>
@@ -183,13 +196,10 @@ export default function OefenSessie({
   if (stap === "invoer") {
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <SessieBalk titel={titel} index={index} totaal={woorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "40px 24px" }}>
-            <p style={{ fontFamily: font, fontWeight: 700, color: C.zwart, fontSize: dyslexie ? 19 : 17, marginTop: 0, marginBottom: 20 }}>
-              Welk woord zag je? Typ het over.
-            </p>
             <form onSubmit={(e) => { e.preventDefault(); bevestig(); }}>
               <input
                 ref={invoerRef}
@@ -222,7 +232,7 @@ export default function OefenSessie({
     const laatste = resultaten[resultaten.length - 1];
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <SessieBalk titel={titel} index={index} totaal={woorden.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "40px 24px" }}>
@@ -287,7 +297,7 @@ export default function OefenSessie({
     const emoji = goed === totaal ? "🌟" : goed >= totaal * 0.6 ? "😊" : "💪";
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "32px 16px" }}>
           <Kaart style={{ textAlign: "center" }}>
             <div style={{ fontSize: 56, marginBottom: 8 }}>{emoji}</div>

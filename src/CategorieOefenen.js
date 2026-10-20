@@ -111,7 +111,7 @@ export default function CategorieOefenen({ font, dyslexie, setDyslexie, onExit, 
 
   return (
     <div style={{ minHeight: "100vh", background: C.creme, fontFamily: font }}>
-      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "32px 16px" }}>
         <button onClick={onExit} style={terugKnop(font)}>← Terug naar menu</button>
         <div style={{ textAlign: "center", marginBottom: 24 }}>

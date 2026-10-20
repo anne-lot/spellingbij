@@ -62,14 +62,18 @@ export function Logo({ size = 40 }) {
 }
 
 // ── HEADER ────────────────────────────────────────────────────────────────────
-export function Header({ dyslexie, setDyslexie, font }) {
+export function Header({ dyslexie, setDyslexie, font, onLogoClick }) {
   return (
     <header style={{
       background: C.wit, borderBottom: `2px solid ${C.rand}`,
       padding: "12px 24px", display: "flex", alignItems: "center",
       justifyContent: "space-between", position: "sticky", top: 0, zIndex: 100,
     }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      <button onClick={onLogoClick} disabled={!onLogoClick} aria-label="Terug naar home" style={{
+        display: "flex", alignItems: "center", gap: 10, background: "none", border: "none",
+        padding: 0, margin: 0, textAlign: "left", cursor: onLogoClick ? "pointer" : "default",
+        font: "inherit",
+      }}>
         <Logo size={36} />
         <div>
           <span style={{ fontFamily: font, fontWeight: 800, fontSize: 18, color: C.zwart }}>
@@ -79,7 +83,7 @@ export function Header({ dyslexie, setDyslexie, font }) {
             groep 3 · 4 · 5 · 6 · 7 · 8
           </span>
         </div>
-      </div>
+      </button>
       <button onClick={() => setDyslexie(!dyslexie)} style={{
         background: dyslexie ? C.geel : C.cremeMid,
         border: `2px solid ${dyslexie ? "#D4A800" : C.rand}`,

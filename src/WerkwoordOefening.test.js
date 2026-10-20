@@ -88,3 +88,13 @@ test("een lege lijst zinnen crasht niet, maar toont een nette uitweg", () => {
   render(<WerkwoordOefening {...props} zinnen={[]} />);
   expect(screen.getByText(/nog geen zinnen/i)).toBeInTheDocument();
 });
+
+test("op Enter drukken na een fout antwoord gaat door naar de volgende zin, zonder muis", () => {
+  render(<WerkwoordOefening {...props} />);
+  fireEvent.change(screen.getByRole("textbox"), { target: { value: "looop" } });
+  fireEvent.click(screen.getByText(/Klaar \(Enter\)/i));
+  expect(screen.getByText("Zo schrijf je dat:")).toBeInTheDocument();
+
+  fireEvent.keyDown(window, { key: "Enter" });
+  expect(screen.getByText(/Jij/)).toBeInTheDocument(); // volgende zin
+});

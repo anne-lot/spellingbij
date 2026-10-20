@@ -346,7 +346,7 @@ export default function SpellingApp() {
   // ── HOME ──
   if (fase === FASE.HOME) return (
     <div style={pageStyle}>
-      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={() => setFase(FASE.HOME)} />
       <div style={{ maxWidth: 520, margin: "0 auto", padding: "40px 16px" }}>
         <div style={{ textAlign: "center", marginBottom: 28 }}>
           <Logo size={80} />
@@ -490,7 +490,7 @@ export default function SpellingApp() {
 
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={() => setFase(FASE.HOME)} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <div style={{ marginBottom: 20 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
@@ -532,7 +532,7 @@ export default function SpellingApp() {
     const bijspijkeren = CATEGORIES.filter(c => (diagnoseScore[c.id]||0) < 3);
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={() => setFase(FASE.HOME)} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <Kaart>
             <div style={{ textAlign: "center", marginBottom: 24 }}>
@@ -601,7 +601,7 @@ export default function SpellingApp() {
 
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={() => setFase(FASE.HOME)} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <div style={{ marginBottom: 20 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
@@ -647,7 +647,7 @@ export default function SpellingApp() {
     const pct = totaalVragen>0 ? Math.round((totaalGoed/totaalVragen)*100) : 100;
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={() => setFase(FASE.HOME)} />
         <div style={{ maxWidth: 480, margin: "0 auto", padding: "40px 16px" }}>
           <Kaart style={{ textAlign: "center" }}>
             <div style={{ fontSize: 64, marginBottom: 16 }}>{pct>=80?"🏆":pct>=60?"⭐":"💪"}</div>

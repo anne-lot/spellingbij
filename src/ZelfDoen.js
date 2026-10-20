@@ -124,7 +124,7 @@ export default function ZelfDoen({ font, dyslexie, setDyslexie, onExit, onVoortg
     const geoefend = categorieStatus(leesVoortgang()).some((r) => r.pogingen > 0);
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "32px 16px" }}>
           <button onClick={onExit} style={terugKnop(font)}>← Terug naar menu</button>
           <Kaart style={{ textAlign: "center" }}>
@@ -164,7 +164,7 @@ export default function ZelfDoen({ font, dyslexie, setDyslexie, onExit, onVoortg
     });
     return (
       <div style={pageStyle} key={ronde}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "20px 16px" }}>
           <div style={{ marginBottom: 20 }}>
             <Honingraat aantal={items.length} antwoorden={antwoordenMetGaten} huidigIndex={index} fase="maken" />
@@ -269,7 +269,7 @@ function ZelfDoenResultaat({ font, dyslexie, setDyslexie, antwoorden, onOpnieuw,
 
   return (
     <div style={{ minHeight: "100vh", background: C.creme, fontFamily: font }}>
-      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+      <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "28px 16px" }}>
         <Kaart style={{ textAlign: "center" }}>
           <div style={{ marginBottom: 18 }}>

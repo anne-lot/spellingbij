@@ -47,6 +47,19 @@ export default function WerkwoordOefening({
     }
   }, [stap]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Enter op het feedbackscherm na een fout antwoord doet hetzelfde als op
+  //    "Volgende zin" klikken — geen muis nodig om door te gaan. ──
+  useEffect(() => {
+    if (stap !== "feedback") return;
+    const laatste = resultaten[resultaten.length - 1];
+    if (!laatste || laatste.goed) return;
+    function opEnter(e) {
+      if (e.key === "Enter") volgende();
+    }
+    window.addEventListener("keydown", opEnter);
+    return () => window.removeEventListener("keydown", opEnter);
+  }, [stap]); // eslint-disable-line react-hooks/exhaustive-deps
+
   function bevestig() {
     if (!invoer.trim()) return;
     const getypt = invoer.trim();
@@ -71,7 +84,7 @@ export default function WerkwoordOefening({
   if (zinnen.length === 0) {
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "32px 16px" }}>
           <Kaart style={{ textAlign: "center" }}>
             <p style={{ fontFamily: font, color: C.grijs, fontSize: 15 }}>Hier staan nog geen zinnen in.</p>
@@ -90,7 +103,7 @@ export default function WerkwoordOefening({
     const [voor, na] = splitsZin(huidigItem.zin);
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <SessieBalk titel={titel} index={index} totaal={zinnen.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "36px 24px" }}>
@@ -142,7 +155,7 @@ export default function WerkwoordOefening({
     const [voor, na] = splitsZin(laatste.zin);
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 560, margin: "0 auto", padding: "24px 16px" }}>
           <SessieBalk titel={titel} index={index} totaal={zinnen.length} font={font} />
           <Kaart style={{ textAlign: "center", padding: "36px 24px" }}>
@@ -185,7 +198,7 @@ export default function WerkwoordOefening({
     const emoji = goed === totaal ? "🌟" : goed >= totaal * 0.6 ? "😊" : "💪";
     return (
       <div style={pageStyle}>
-        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} />
+        <Header dyslexie={dyslexie} setDyslexie={setDyslexie} font={font} onLogoClick={onExit} />
         <div style={{ maxWidth: 520, margin: "0 auto", padding: "32px 16px" }}>
           <Kaart style={{ textAlign: "center" }}>
             <div style={{ fontSize: 56, marginBottom: 8 }}>{emoji}</div>

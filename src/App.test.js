@@ -40,3 +40,12 @@ test('vanuit de spellingkaart kom je terug op het startscherm', () => {
   fireEvent.click(screen.getByText(/Terug naar menu/i));
   expect(screen.getByText(/Start Flitswoorden/i)).toBeInTheDocument();
 });
+
+test('logo linksboven is klikbaar en brengt je terug naar het startscherm', () => {
+  render(<App />);
+  fireEvent.click(screen.getByText(/Jouw spellingkaart/i));
+  expect(screen.queryByText(/Start Flitswoorden/i)).not.toBeInTheDocument();
+
+  fireEvent.click(screen.getByRole('button', { name: /Terug naar home/i }));
+  expect(screen.getByText(/Start Flitswoorden/i)).toBeInTheDocument();
+});

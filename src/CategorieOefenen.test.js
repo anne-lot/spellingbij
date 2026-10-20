@@ -119,8 +119,8 @@ test("klaarscherm toont een vriendelijke samenvatting en knoppen om door te gaan
   fireEvent.click(screen.getByText(categorieLabel("verscherping")));
 
   for (let i = 0; i < 10; i++) {
-    const opnieuw = screen.queryByText(/Welk woord zag je/i);
-    if (!opnieuw) laatFlitsAflopen();
+    const isInvoerstap = screen.queryByRole("textbox");
+    if (!isInvoerstap) laatFlitsAflopen();
     typ("zzzzzz");
     const volgende = screen.queryByText(/Volgende woord/i);
     if (volgende) fireEvent.click(volgende);
